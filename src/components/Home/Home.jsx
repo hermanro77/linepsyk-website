@@ -1,18 +1,14 @@
 import React from "react";
-import Background from "../../commons/Background";
 import styled from 'styled-components';
 
 const Home = () => {
 
     return (
-        <>
-          <StyledOuter>
-            <StyledContainer>
-            
-            </StyledContainer>  
-          </StyledOuter>
-          
-        </>
+      <StyledOuter className="animated fadeIn">
+        <StyledContainer>
+        
+        </StyledContainer>  
+      </StyledOuter>
     );
 }
 
@@ -23,9 +19,9 @@ const StyledContainer = styled.div`
   background-color: red;
   min-height: calc(90vh - 6rem);
   max-height: calc(90vh - 6rem);
-  min-width: calc(95% - 7.5rem);
-  max-width: calc(95% - 7.5rem);
-  background-color: rgba(20, 20, 20, 0.9);
+  min-width: calc(95% - 12rem);
+  max-width: calc(95% - 12rem);
+  background-color: rgba(20, 20, 20, 0.75);
   border-radius: 6px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -35,8 +31,8 @@ const StyledContainer = styled.div`
   @media screen and (max-width: 1400px) {
     min-height: calc(94vh - 4rem);
     max-height: calc(94vh - 4rem);
-    min-width: calc(95%);
-    max-width: calc(95%);
+    min-width: calc(85%);
+    max-width: calc(85%);
     margin: auto;
     margin-top: 4rem;
   }
