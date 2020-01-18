@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <StyledOuter>
       <StyledContainer className="animated fadeIn">
-        <text style={{color: "white"}}>Kontakt</text>
+        <h3 style={{color: "white"}}>Kontakt</h3>
       </StyledContainer>  
     </StyledOuter>
   );

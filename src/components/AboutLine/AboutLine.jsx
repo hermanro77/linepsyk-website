@@ -5,7 +5,7 @@ const AboutLine = () => {
   return (
     <StyledOuter>
       <StyledContainer className="animated fadeIn">
-        <text style={{color: "white"}}>Hello my name is Line</text>
+        <h3 style={{color: "white"}}>Hello my name is Line</h3>
       </StyledContainer>  
     </StyledOuter> 
   );

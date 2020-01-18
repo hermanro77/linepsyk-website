@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const NavbarButton = ({ text }) => {
+const NavbarButton = ({ text }) => { 
 
     return (
         <StyledButton>

@@ -18,6 +18,7 @@ export const StyledContainer = styled.div`
   background-color: #21C58B;
   min-height: calc(90vh - 6rem);
   max-height: calc(90vh - 6rem);
+  width: 100vh;
   min-width: calc(95% - 12rem);
   max-width: calc(95% - 12rem);
   background-color: rgba(20, 20, 20, 0.75);
@@ -26,17 +27,19 @@ export const StyledContainer = styled.div`
   position: relative;
   margin-left: 5rem;
   margin-right: auto;
+  overflow: auto;
 
   @media screen and (max-width: 1400px) {
     min-height: calc(94vh - 4rem);
-    max-height: calc(94vh - 4rem);
-    min-width: calc(85%);
-    max-width: calc(85%);
+    min-width: calc(95%);
+    max-width: calc(95%);
     margin: auto;
     margin-top: 5rem;
+    overflow: auto;
   }
 
   @media screen and (max-width: 600px) {
     padding: 1.5rem;
+    overflow: auto;
   }
 `;
