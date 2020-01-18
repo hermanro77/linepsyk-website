@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
 import Router from './Router/Router';
+import "animate.css";
 
 const App = () => {
   return (
