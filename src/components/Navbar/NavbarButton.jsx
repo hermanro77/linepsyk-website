@@ -20,7 +20,6 @@ const StyledButton = styled.button`
   padding: 0.25em 1em;
   border: none;
   font-weight: bold;
-  margin: 0 1rem 0 1rem;
   outline: 0;
 
   &:hover {

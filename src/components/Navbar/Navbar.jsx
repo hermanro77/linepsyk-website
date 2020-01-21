@@ -32,7 +32,7 @@ export default Navbar;
 
 const StyledNavbarContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding: 12px;
   min-height: calc(8vh);
   max-height: calc(8vh);
@@ -43,6 +43,5 @@ const StyledNavbarContainer = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  margin: 0 1rem 0 1rem;
   display: "block";
 `;
