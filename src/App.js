@@ -31,7 +31,6 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.8;
     }
     body {
-        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
         font-family: 'Poppins', sans-serif;
         overflow: hidden;
         margin: 0;
