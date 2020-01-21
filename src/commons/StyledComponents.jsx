@@ -3,19 +3,21 @@ import styled from 'styled-components';
 export const StyledOuter = styled.main`
   height: 100%;
   display: flex;
-  flex-direction: row;
-  background-color: #34314f;
-  position: relative;
   background-image: url("/images/river.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-block-size: -webkit-fill-available;
+  overflow: scroll;
 `;
+
+
+//display: flex;
+//flex-direction: row;
+//position: relative;
 
 export const StyledContainer = styled.div`
   padding: 2rem;
-  background-color: #21C58B;
   min-height: calc(90vh - 6rem);
   max-height: calc(90vh - 6rem);
   width: 100vh;
@@ -32,7 +34,6 @@ export const StyledContainer = styled.div`
   @media screen and (max-width: 1400px) {
     min-height: calc(94vh - 4rem);
     min-width: calc(95%);
-    max-width: calc(95%);
     margin: auto;
     margin-top: 5rem;
     overflow: auto;
