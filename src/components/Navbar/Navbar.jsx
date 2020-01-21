@@ -14,19 +14,19 @@ const Navbar = () => {
 
         <StyledLinkContainer open={burgerOpen} className={burgerOpen ? "animated fadeInRight" : ""}>
           
-          <StyledLink to={"/"} onClick={() => setBurgerOpen(!burgerOpen)}>
+          <StyledLink to={"/"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
             Hjem
           </StyledLink>
           
-          <StyledLink to={"/om-gestalt"} onClick={() => setBurgerOpen(!burgerOpen)}>
+          <StyledLink to={"/om-gestalt"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
             Om gestalt
           </StyledLink>
           
-          <StyledLink to={"/om-line"} onClick={() => setBurgerOpen(!burgerOpen)}>
+          <StyledLink to={"/om-line"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
             Om Line
           </StyledLink>
           
-          <StyledLink to={"/kontakt"} onClick={() => setBurgerOpen(!burgerOpen)}>
+          <StyledLink to={"/kontakt"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
             Kontakt
           </StyledLink>
 
@@ -62,13 +62,18 @@ const StyledLinkContainer = styled.div`
   padding: 0 10px 0 10px;
 
   @media screen and (max-width: 970px){
-    width: 60%;
+    width: 65%;
+  }
+  
+  @media screen and (max-width: 900px){
+    width: 100%;
   }
 
   @media screen and (max-width: 768px){
     position: absolute;
     right: 0px;
     height: 90vh;
+    width: 50%;
     top: 10vh;
     background-color: rgba(20, 20, 20, 0.9);
     display: flex;
