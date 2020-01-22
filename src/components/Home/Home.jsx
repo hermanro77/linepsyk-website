@@ -1,7 +1,7 @@
 import React from "react";
 import Welcome from "./Welcome";
 import { StyledOuter, StyledContainer } from "../../commons/StyledComponents";
-import SocialFollow from "../SocialFollow/SocialFollow";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
 
@@ -24,7 +24,7 @@ const Home = () => {
           <Welcome/>
           <Welcome/>
           <Welcome/>
-          <SocialFollow/>
+          <Footer/>
         </StyledContainer>   
       </StyledOuter>
       

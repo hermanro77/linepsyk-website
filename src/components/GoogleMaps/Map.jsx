@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
+import styled from "styled-components";
 
 const Map = () => {
   const [showInfoWindow, setShowInfoWindow] = useState(false);
@@ -30,7 +31,7 @@ const Map = () => {
   ))
 
   return(
-    <div style={{ height: "300px", width: "60%" }}>
+    <Container>
       <MyMapComponent
         isMarkerShown
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.
@@ -39,9 +40,14 @@ const Map = () => {
         containerElement={<div style={{ height: `inherit` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
-    </div>
+    </Container>
   );  
 }
 
 
 export default Map;
+
+const Container = styled.div`
+  height: 300px;
+  width: 60%;
+`;

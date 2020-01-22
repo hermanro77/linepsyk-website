@@ -1,13 +1,13 @@
 import React from "react";
 import { StyledOuter, StyledContainer } from "../../commons/StyledComponents";
-import SocialFollow from "../SocialFollow/SocialFollow";
+import Footer from "../Footer/Footer";
 
 const AboutLine = () => {
   return (
     <StyledOuter>
       <StyledContainer className="animated fadeIn">
         <h3 style={{color: "white"}}>Hello my name is Line</h3>
-        <SocialFollow></SocialFollow>
+        <Footer></Footer>
       </StyledContainer>
     </StyledOuter> 
   );
