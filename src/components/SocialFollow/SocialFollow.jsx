@@ -32,8 +32,6 @@ const SocialFollowContainer = styled.div`
   background-color: transparent;
   padding: 25px 50px;
   text-align: center;
-  position: absolute;
-  width: calc(95%);
 `;
 
 const StyledIconLink = styled.a`
