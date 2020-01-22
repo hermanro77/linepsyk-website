@@ -8,7 +8,7 @@ const SocialFollow = () => {
       <SocialFollowContainer>
         <Styledh3>Følg og les mer om meg her!</Styledh3>
 
-        <StyledIconLink instagram={true} href={"https://www.instagram.com/linegestaltterapaut"}>
+        <StyledIconLink instagram={true} href={"https://www.instagram.com/gestaltline"}>
           <FontAwesomeIcon style={{height: "50px", width: "50px"}} icon={faInstagram}></FontAwesomeIcon>
         </StyledIconLink>
 
