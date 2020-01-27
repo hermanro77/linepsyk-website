@@ -26,8 +26,6 @@ export default Footer;
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   height: fit-content;
 
   @media screen and (max-width: 768px){

@@ -59,5 +59,7 @@ const StyledP = styled.p`
 
 const StyledH2 = styled.h2`
   font-size: 20px;
-  color: #43c6ac
+  background: -webkit-linear-gradient(#43c6ac, #f8ffae);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;

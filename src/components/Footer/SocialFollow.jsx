@@ -7,7 +7,7 @@ const SocialFollow = () => {
     return (
       <SocialFollowContainer>
         <Styledh3>Følg og les mer om meg her!</Styledh3>
-
+        <div>
         <StyledIconLink instagram={true} href={"https://www.instagram.com/gestaltline"}>
           <FontAwesomeIcon style={{height: "50px", width: "50px"}} icon={faInstagram}></FontAwesomeIcon>
         </StyledIconLink>
@@ -15,7 +15,7 @@ const SocialFollow = () => {
         <StyledIconLink href={"https://www.facebook.com/line.rommetveit"}>
           <FontAwesomeIcon style={{height: "50px", width: "50px"}} icon={faFacebook}></FontAwesomeIcon>
         </StyledIconLink>
-
+        </div>
       </SocialFollowContainer>
     );
 }
@@ -29,9 +29,17 @@ const Styledh3 = styled.h3`
 `;
 
 const SocialFollowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: transparent;
   padding: 25px 50px;
   text-align: center;
+  margin-left: 8vw;
+
+  @media screen and (max-width: 768px){
+    margin: 0px;
+  }
 `;
 
 const StyledIconLink = styled.a`
