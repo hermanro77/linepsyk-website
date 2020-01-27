@@ -29,12 +29,7 @@ const StyledBurger = styled.div`
     border-radius: 2px;
     transition: all 0.4s linear;
 
-    background: ${({ open }) => open ? 'linear-gradient(' +
-      'rgba(95, 241, 105, 0.4),' +
-      'rgba(95, 241, 105, 0.5),' +
-      'rgba(95, 241, 105, 0.6),' +
-      'rgba(95, 241, 105, 0.7),' +
-      'rgba(95, 241, 105, 0.8))' : 'rgb(226, 226, 226)'};
+    background: ${({ open }) => open ? 'linear-gradient(to right, #43c6ac, #f8ffae)' : 'rgb(226, 226, 226)'};
     
 
     :first-child{
@@ -49,13 +44,7 @@ const StyledBurger = styled.div`
     }
   }
   &:hover div{
-    background: linear-gradient(
-      rgba(95, 241, 105, 0.4),
-      rgba(95, 241, 105, 0.5),
-      rgba(95, 241, 105, 0.6),
-      rgba(95, 241, 105, 0.7),
-      rgba(95, 241, 105, 0.8)
-    );
+    background: linear-gradient(to right, #43c6ac, #f8ffae);
   }
 
   

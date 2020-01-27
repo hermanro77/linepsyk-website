@@ -31,7 +31,7 @@ const Map = () => {
   ))
 
   return(
-    <Container>
+    <StyledMapContainer>
       <MyMapComponent
         isMarkerShown
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.
@@ -40,14 +40,18 @@ const Map = () => {
         containerElement={<div style={{ height: `inherit` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
-    </Container>
+    </StyledMapContainer>
   );  
 }
 
 
 export default Map;
 
-const Container = styled.div`
+const StyledMapContainer = styled.div`
   height: 300px;
-  width: 60%;
+  width: 50%;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 `;

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./Logo";
-import Burger from "../Burger/Burger";
+import Burger from "./Burger";
 
 const Navbar = () => {
 
@@ -59,7 +59,6 @@ const StyledLinkContainer = styled.div`
   justify-content: space-around;
   background: transparent;
   align-items: center;
-  padding: 0 10px 0 10px;
 
   @media screen and (max-width: 970px){
     width: 65%;
@@ -85,9 +84,9 @@ const StyledLinkContainer = styled.div`
 
 const StyledLink = styled(Link)`
   background: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   font-size: 1em;
-  padding: 0.25em 1em;
+  padding: 0.25rem 1rem;
   border: none;
   font-weight: bold;
   outline: 0;
@@ -95,28 +94,16 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 100%;
 
   &:hover {
     cursor: pointer;
-    background: linear-gradient(
-      rgba(95, 241, 105, 0.4),
-      rgba(95, 241, 105, 0.5),
-      rgba(95, 241, 105, 0.6),
-      rgba(95, 241, 105, 0.7),
-      rgba(95, 241, 105, 0.8)
-    ); //palevioletred
-    color: white;
-    border-radius: 3px;
-  
-  &:active{
-    background: linear-gradient(
-      rgba(95, 241, 105, 0.4),
-      rgba(95, 241, 105, 0.5),
-      rgba(95, 241, 105, 0.6),
-      rgba(95, 241, 105, 0.7),
-      rgba(95, 241, 105, 0.8)
-    );
+    background: linear-gradient(to right, #43c6ac, #f8ffae);
+    color: rgba(20, 20, 20, 0.8);
+    border-radius: 4px;
+  }
+
+  @media screen and (max-width: 768px){
+    width: 100%;
   }
 `; 
