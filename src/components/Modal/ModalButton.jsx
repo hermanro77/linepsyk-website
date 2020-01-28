@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Check } from "react-feather";
+import { Check, X } from "react-feather";
+
 
 const ModalButton = ({ value, closeModalAction }) => {
     const [error, setError] = useState("");
 
     const saveBooking = () => {
       setError("");
+      
+      let { name, email, phone, message } = value;
 
-      value = value.trim();
-      if (!value) {
+      name = name.trim();
+      email = email.trim();
+      phone = phone.trim();
+      message = message.trim();
+
+      if (!name) {
         return setError("Please enter a name");
       }
-
-      const { name, email, phone, message } = value;
+      else if (!email) {
+        return setError("Please enter a email");
+      }
+      else if (!phone) {
+        return setError("Please enter a phone number");
+      }
+      else if (!message) {
+        return setError("Please enter a message");
+      }
 
       closeModalAction();
     };
@@ -25,7 +39,10 @@ const ModalButton = ({ value, closeModalAction }) => {
           Send
         </StyledButton>
         <StyledError>{error}</StyledError>
-        <StyledButton onClick={closeModalAction}>Cancel</StyledButton>
+        <StyledButton onClick={closeModalAction}>
+          <X />
+          Cancel
+        </StyledButton>
       </ButtonCont>
     );
   };

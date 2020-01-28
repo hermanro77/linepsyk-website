@@ -5,7 +5,7 @@ import ModalForm from "./ModalForm";
 const ModalContent = ({ closeModalAction }) => {
 
   return (
-      <Popup className="animated rotateInDownLeft">
+      <Popup className="animated fadeInDown">
         <PopupInside>
           <Backgrounds>
             <Background1></Background1>
@@ -126,6 +126,7 @@ const Background5 = styled.div`
   bottom: var(--offset);
   top: var(--offset);
   background: linear-gradient(to right, #c9c8ff, #c3fad1);
+  transform: scale(6);
   z-index: 4;
   transition: all 0.5s ease 0.4s;
 `;

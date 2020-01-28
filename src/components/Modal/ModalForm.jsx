@@ -5,7 +5,12 @@ import ModalButton from "./ModalButton";
 import "../../commons/style.scss";
 
 const ModalForm = ({ closeModalAction }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   return (
     <>
@@ -14,20 +19,32 @@ const ModalForm = ({ closeModalAction }) => {
         <StyledInput
           placeholder="Navn"
           autoFocus={true}
-          onChange={({ target }) => setValue(target.value)}
+          onChange={({ target }) => setValue(prev => ({
+            ...prev,
+            name: target.value
+          }))}
         />
         <StyledInput
           placeholder="Email"
-          onChange={({ target }) => setValue(target.value)}
+          onChange={({ target }) => setValue(prev => ({
+            ...prev,
+            email: target.value
+          }))}
         />
         <StyledInput
           placeholder="Tlf"
-          onChange={({ target }) => setValue(target.value)}
+          onChange={({ target }) => setValue(prev => ({
+            ...prev,
+            phone: target.value
+          }))}
         />
       </StyledVerticalCont>
       <StyledInput
           placeholder="Message"
-          onChange={({ target }) => setValue(target.value)}
+          onChange={({ target }) => setValue(prev => ({
+            ...prev,
+            message: target.value
+          }))}
           message
         />
       </StyledHorCont>

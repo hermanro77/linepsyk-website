@@ -57,7 +57,7 @@ const StyledModal = styled.div`
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
-  background-color: rgba(240, 240, 240, 0.7);
+  background-color: rgba(20, 20, 20, 0.9);
   z-index: 10;
   display: flex;
   align-items: center;
