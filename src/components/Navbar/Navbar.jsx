@@ -3,38 +3,82 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Burger from "./Burger";
+import { dispatch, useGlobalState } from '../../Store/State';
+
+const setPage = (pageNum) => dispatch({
+  page: pageNum,
+  type: 'setPage',
+});
 
 const Navbar = () => {
 
-    const [burgerOpen, setBurgerOpen] = useState(false);
 
-    return (
-      <StyledNavbarContainer>
+    const [burgerOpen, setBurgerOpen] = useState(false);
+    const [globalStatePage] = useGlobalState('page');
+
+    const handleOnClick = (burgerOpen, pageNumber) => {
+      if (burgerOpen) setBurgerOpen(!burgerOpen);
+      setPage(pageNumber);
+    }
+    console.log(globalStatePage);
+    
+    const renderNavbar = () => {
+      return(
+        <StyledNavbarContainer>
         <Logo></Logo>
 
         <StyledLinkContainer open={burgerOpen} className={burgerOpen ? "animated fadeInRight" : ""}>
-          
-          <StyledLink to={"/"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
+          <Div>
+            <StyledLink 
+            to={"/"} 
+            onClick={() => handleOnClick(burgerOpen, 0)}
+            >
             Hjem
-          </StyledLink>
+            </StyledLink>
+            <StyledLine showLine={globalStatePage === 0} />
+          </Div>
           
-          <StyledLink to={"/om-gestalt"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
-            Om gestalt
-          </StyledLink>
-          
-          <StyledLink to={"/om-line"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
-            Om Line
-          </StyledLink>
-          
-          <StyledLink to={"/kontakt"} onClick={burgerOpen ? () => setBurgerOpen(!burgerOpen) : () => ""}>
-            Kontakt
-          </StyledLink>
+          <Div>
+            <StyledLink 
+            to={"/om-gestalt"} 
+            onClick={() => handleOnClick(burgerOpen, 1)}
+            >
+              Om gestalt
+            </StyledLink>
+            <StyledLine showLine={globalStatePage === 1} />
+          </Div>
 
+          <Div>
+            <StyledLink 
+            to={"/om-line"} 
+            onClick={() => handleOnClick(burgerOpen, 2)}
+            >
+              Om Line
+            </StyledLink>
+            <StyledLine showLine={globalStatePage === 2} />
+          </Div>
+
+          <Div>
+            <StyledLink 
+            to={"/kontakt"} 
+            onClick={() => handleOnClick(burgerOpen, 3)}
+            >
+              Kontakt
+            </StyledLink>
+            <StyledLine showLine={globalStatePage === 3} />
+          </Div>
         </StyledLinkContainer>
 
         <Burger open={burgerOpen} onClick={() => setBurgerOpen(!burgerOpen)}/>
 
       </StyledNavbarContainer>
+      ); 
+    }
+
+    return (
+      <>
+      {renderNavbar()}
+      </>
     );
 }
 
@@ -82,12 +126,34 @@ const StyledLinkContainer = styled.div`
   }
 `;
 
+
+const StyledLine = styled.div`
+  background: linear-gradient(to right, #43c6ac, #f8ffae);
+  height: 2px;
+  width: 100%;
+  border-radius: 100px;
+  display: ${({ showLine }) => showLine ? "" : "none"};
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+`;
+
+
+const Div = styled.div`
+  @media screen and (max-width: 768px){
+    width: 100%
+    height: 100%;
+  }
+`;
+
 const StyledLink = styled(Link)`
   background: transparent;
   color: white;
   font-size: 1em;
   padding: 0.25rem 1rem;
   border: none;
+  
   font-weight: bold;
   outline: 0;
   text-decoration: none;
@@ -101,6 +167,7 @@ const StyledLink = styled(Link)`
     background: linear-gradient(to right, #43c6ac, #f8ffae);
     color: rgba(20, 20, 20, 0.8);
     border-radius: 4px;
+    border: none;
   }
 
   @media screen and (max-width: 768px){

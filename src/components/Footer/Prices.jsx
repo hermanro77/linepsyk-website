@@ -17,7 +17,7 @@ const Prices = () => {
 export default Prices;
 
 
-const StyledP = styled.p`
+const StyledP = styled.div`
 
   border-top: 2px dashed;
   border-color: #43c6ac !important;
