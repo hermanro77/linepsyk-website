@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "./Logo";
@@ -12,10 +12,40 @@ const setPage = (pageNum) => dispatch({
 
 const Navbar = () => {
 
-
+      
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [globalStatePage] = useGlobalState('page');
+    const [globalStatemodal] = useGlobalState('showModal');
     
+    useEffect(() => {
+      setPathNameNum(window.location.pathname)
+      renderNavbar();
+    }, [window.location.pathname]);
+
+    const setPathNameNum = (pathname) => {
+      switch (pathname) {
+        case '/hjem': 
+          setPage(0);
+          break;
+        
+        case '/om-gestalt': 
+          setPage(1);
+          break;
+        
+        case '/om-line': 
+          setPage(2);
+          break;
+        
+        case '/kontakt':
+          setPage(3);
+          break;
+        
+        default: setPage(0);
+      }
+    }
+    
+
+    console.log("show: " + globalStatemodal);
     const handleOnClick = (burgerOpen, pageNumber) => {
       if (burgerOpen) setBurgerOpen(!burgerOpen);
       setPage(pageNumber);
@@ -29,7 +59,7 @@ const Navbar = () => {
         <StyledLinkContainer open={burgerOpen} className={burgerOpen ? "animated fadeInRight" : ""}>
           <Div>
             <StyledLink 
-            to={"/"} 
+            to={"/hjem"} 
             onClick={() => handleOnClick(burgerOpen, 0)}
             >
             Hjem

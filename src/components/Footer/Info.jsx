@@ -45,6 +45,7 @@ export const StyledMailLink = styled.a`
   flex-direction: row;
   align-items: center;
   padding: 0.5rem;
+  margin-right: 10px;
   &:not(:last-child){
     margin-bottom: 5px;
   }

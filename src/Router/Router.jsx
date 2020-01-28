@@ -12,6 +12,7 @@ const Router = () => {
             <Navbar />
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/hjem" component={Home} />
                 <Route exact path="/om-gestalt" component={AboutGestalt} />
                 <Route exact path="/om-line" component={AboutLine} />
                 <Route exact path="/kontakt" component={Contact} />
