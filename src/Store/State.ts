@@ -3,14 +3,18 @@ import { applyMiddleware, Dispatch } from 'redux';
 import { createStore } from 'react-hooks-global-state';
 
 type State = {
-  page: number;
+  page: number,
+  showModal: boolean;
 };
 
 type Action =
-  | { type: 'setPage'; page: Number };
+  | { type: 'setPage'; page: Number }
+  | { type: 'closeModalAction'; }
+  | { type: 'showModalAction'; };
 
 const defaultState: State = {
   page: 0,
+  showModal: false,
 };
 
 const LOCAL_STORAGE_KEY = 'my_local_storage_key';
@@ -18,6 +22,7 @@ const parseState = (str: string | null): State | null => {
   try {
     const state = JSON.parse(str || '');
     if (typeof state.page !== 'number') throw new Error();
+    if (typeof state.showModal !== 'boolean') throw new Error();
     return state as State;
   } catch (e) {
     return null;
@@ -32,7 +37,14 @@ const reducer = (state = initialState, action: Action) => {
       ...state,
       page: action.page,
     };
-    
+    case 'closeModalAction': return {
+      ...state,
+      showModal: false,
+    };
+    case 'showModalAction': return {
+      ...state,
+      showModal: true,
+    };
     default: return state;
   }
 };

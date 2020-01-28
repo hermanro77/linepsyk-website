@@ -2,12 +2,14 @@ import React from 'react';
 import { createGlobalStyle } from "styled-components";
 import Router from './Router/Router';
 import "animate.css";
+import Modal from './components/Modal/Modal';
 
 const App = () => {
   return (
     <>
       <Router />
       <GlobalStyle />
+      <Modal />
     </>
   );
 }

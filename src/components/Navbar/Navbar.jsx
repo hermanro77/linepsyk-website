@@ -15,12 +15,11 @@ const Navbar = () => {
 
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [globalStatePage] = useGlobalState('page');
-
+    
     const handleOnClick = (burgerOpen, pageNumber) => {
       if (burgerOpen) setBurgerOpen(!burgerOpen);
       setPage(pageNumber);
     }
-    console.log(globalStatePage);
     
     const renderNavbar = () => {
       return(
@@ -75,11 +74,7 @@ const Navbar = () => {
       ); 
     }
 
-    return (
-      <>
-      {renderNavbar()}
-      </>
-    );
+    return renderNavbar();
 }
 
 export default Navbar;

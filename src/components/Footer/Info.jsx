@@ -2,8 +2,14 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faEnvelope, faPhone, faMoneyCheck } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import { dispatch } from "../../Store/State";
+
+const showModalAction = () => dispatch({
+  type: "showModalAction"
+});
 
 const Info = () => {
+
 
   return(
     <StyledVerticalContainer>
@@ -22,7 +28,7 @@ const Info = () => {
         <h1>98476555</h1>
       </StyledMailLink>
 
-      <StyledMailLink>
+      <StyledMailLink onClick={() => showModalAction()}>
         <StyledFontAwesomeIcon icon={faMoneyCheck}></StyledFontAwesomeIcon>
         <h1>Bestill time</h1>
       </StyledMailLink>
