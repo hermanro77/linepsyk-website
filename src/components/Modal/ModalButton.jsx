@@ -38,7 +38,7 @@ const ModalButton = ({ value, closeModalAction }) => {
           <Check />
           Send
         </StyledButton>
-        <StyledError>{error}</StyledError>
+        <StyledError show={error.length > 0}>{error}</StyledError>
         <StyledButton onClick={closeModalAction}>
           <X />
           Cancel
@@ -55,7 +55,14 @@ const ButtonCont = styled.div`
   justify-content: space-between;
   width: 500px;
   z-index: 5;
-  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    width: 100%;
+    padding-top: 0px;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -96,9 +103,9 @@ const StyledButton = styled.button`
         top: 32.5%;
   }
 
-  @media screen and (max-width: 500px) {
-    max-width: 275px;
-    min-width: 275px;
+  @media screen and (max-width: 768px) {
+    max-width: 80%;
+    min-width: 80%;
     margin: 0 auto;
     margin-top: 2rem;
   }
@@ -110,6 +117,7 @@ const StyledError = styled.h5`
   min-height: 30px;
   color: #ed213a;
   margin-top: 2rem;
+  display: ${({show}) => show ? "block" : "none"};
 `;
 
 const StyledCancel = styled.a`
