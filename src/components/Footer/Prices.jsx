@@ -62,4 +62,8 @@ const StyledH2 = styled.h2`
   background: -webkit-linear-gradient(#43c6ac, #f8ffae);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 600px) {
+    font-size: 3.5vw;
+  }
 `;

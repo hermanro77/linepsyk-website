@@ -46,6 +46,9 @@ export const StyledMailLink = styled.a`
   align-items: center;
   padding: 0.5rem;
   margin-right: 10px;
+
+  font-size: 1.2vw;
+
   &:not(:last-child){
     margin-bottom: 5px;
   }
