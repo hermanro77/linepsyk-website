@@ -43,4 +43,8 @@ export const StyledContainer = styled.div`
     padding: 1.5rem;
     overflow: auto;
   }
+  @media screen and (max-width: 450px) {
+    padding: 1rem;
+    overflow: auto;
+  }
 `;

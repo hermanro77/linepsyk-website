@@ -39,13 +39,12 @@ const ModalForm = ({ closeModalAction }) => {
           }))}
         />
       </StyledVerticalCont>
-      <StyledInput
+      <StyledTextArea
           placeholder="Message"
           onChange={({ target }) => setValue(prev => ({
             ...prev,
             message: target.value
           }))}
-          message
         />
       </StyledHorCont>
       <ModalButton value={value} closeModalAction={closeModalAction} />
@@ -59,9 +58,13 @@ const StyledVerticalCont = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 5;
-  width: 100%;
+  width: auto;
   height: fit-content;
   margin: 0 10px 0 10px;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 `;
 
 const StyledHorCont = styled.div`
@@ -71,9 +74,15 @@ const StyledHorCont = styled.div`
   align-items: center;
   width: 100%;
   height: fit-content;
+  padding: 0 2rem;
+  
 
   @media screen and (max-width: 768px){
+    padding: 0px;
     flex-direction: column;
+    *{
+      margin-bottom: 5px;
+    }
   }
 `;
 
@@ -104,9 +113,47 @@ const StyledInput = styled.input`
     box-shadow: 0 0 0 2px #837dff;
   }
 
-  @media screen and (max-width: 500px) {
-    max-width: 275px;
-    min-width: 275px;
-    margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    max-width: 80%;
+    min-width: 80%;
+    margin: 0 auto 5px auto;
+    min-height: 2rem;
+  }
+`;
+
+const StyledTextArea = styled.textarea`
+  outline: none;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  min-height: 100%;
+  max-height: 100%;
+  margin: 0 10px 5px 10px;
+  padding: 26.5px 8px;
+  border: 1.5px solid #9e9e9e;
+  width: 100%;
+
+  &::placeholder {
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+  }
+  &:focus,
+  &:active {
+    border: 1.5px solid #6927ff;
+    box-shadow: 0 0 0 2px #837dff;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 80%;
+    min-width: 80%;
+    margin: 0 auto 5px auto;
+    min-height: 2rem;
+    height: 200px;
   }
 `;
