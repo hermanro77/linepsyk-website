@@ -17,7 +17,7 @@ const ModalContent = ({ closeModalAction }) => {
           </Backgrounds>
           <StyledHeading>Bestill time</StyledHeading>
           <StyledDesc>
-            Ved 'send' vil en email sendes til Line og hun vil kontakte deg straks!
+            En email vil sendes til Line og hun vil kontakte deg straks!
           </StyledDesc>
           <ModalForm closeModalAction={closeModalAction}></ModalForm>
         </PopupInside>
@@ -42,8 +42,13 @@ const Popup = styled.div`
   justify-content: center;
   transition: all 0.2s ease 
 
+  @media screen and (max-width:1100px){
+    width: 85%;
+  }
+  
   @media screen and (max-width:768px){
-    width: 80%;
+    flex-direction: column;
+    width: 85%;
   }
 `;
 
@@ -60,6 +65,12 @@ const PopupInside = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column; 
+
+  @media screen and (max-width:768px){
+    background-color: white;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
 `;
 
 const Backgrounds = styled.div`
@@ -68,7 +79,11 @@ const Backgrounds = styled.div`
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  
+  @media screen and (max-width:768px){
+    position: sticky;
+  }
+
 `;
 
 const Background1 = styled.div`
@@ -141,6 +156,10 @@ const Background6 = styled.div`
   z-index: 5;
   transform: scale(8);
   transition: all 0.8s ease 0.4s;
+
+  @media screen and (max-width:768px){
+    display: none;
+  }
 `;
 
 
@@ -199,7 +218,7 @@ const StyledHeading = styled.h3`
 
 const StyledDesc = styled.p`
   text-align: center;
-  color: #9e9e9e;
+  color: #3c4588;
   max-width: 75%;
   margin: 1rem auto;
   margin-bottom: 2rem;

@@ -66,4 +66,9 @@ const StyledModal = styled.div`
   &:focus{
     outline: none;
   }
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    
+  }
 `;

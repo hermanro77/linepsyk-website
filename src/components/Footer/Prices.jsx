@@ -8,7 +8,7 @@ const Prices = () => {
     <StyledVerticalContainer>
       <StyledP><StyledH2>700kr/60 minutter</StyledH2></StyledP>
       <StyledP><StyledH2>25% student rabatt</StyledH2></StyledP>
-      <StyledP><StyledH2>For mer info send meg gjerne mail eller ring</StyledH2></StyledP>
+      <StyledP><StyledH2>For mer info send meg gjerne en melding</StyledH2></StyledP>
     </StyledVerticalContainer>
 
   );
@@ -32,7 +32,7 @@ const StyledP = styled.div`
     margin-right: 30px; 
     padding-right: 0;
     max-height: 95px;
-
+    width: auto;
   }
 
   &:nth-child(even) {
@@ -42,7 +42,7 @@ const StyledP = styled.div`
     margin-left: 30px; 
     padding-left: 0;
     max-height: 95px;
-
+    width: auto;
   }
 
   &:first-child {
