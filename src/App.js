@@ -34,8 +34,6 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         font-family: 'Poppins', sans-serif;
-
-
         overflow: hidden;
         margin: 0;
     } 
