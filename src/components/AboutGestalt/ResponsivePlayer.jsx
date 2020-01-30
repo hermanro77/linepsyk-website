@@ -12,6 +12,11 @@ const ResponsivePlayer = ({ url }) => {
           width="100%"
           height="100%"
           controls
+          config={{
+            youtube: {
+              playerVars: { "origin": "https://localhost:3000" }
+            }
+          }}
         />
       </StyledPlayerContainer>
     </Center>
