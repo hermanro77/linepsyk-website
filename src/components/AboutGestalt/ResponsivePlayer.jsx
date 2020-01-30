@@ -11,6 +11,7 @@ const ResponsivePlayer = ({ url }) => {
           url={url}
           width="100%"
           height="100%"
+          controls
         />
       </StyledPlayerContainer>
     </Center>
@@ -20,10 +21,11 @@ const ResponsivePlayer = ({ url }) => {
 export default ResponsivePlayer;
 
 const Center = styled.div`
-  padding: 50px 75px;
-
+  padding: 25px 25px;
+  width: 50%;
   @media screen and (max-width: 768px){
     padding: 25px 25px;
+    width: 100%;
   }
 `;
 

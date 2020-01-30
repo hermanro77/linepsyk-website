@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
+import useWindowDimensions from "../../commons/CustomHooks";
 import ModalButton from "./ModalButton";
 import "../../commons/style.scss";
 
@@ -12,13 +12,15 @@ const ModalForm = ({ closeModalAction }) => {
     message: "",
   });
 
+  const { height, width } = useWindowDimensions();
+  
   return (
     <>
       <StyledHorCont>
       <StyledVerticalCont>
         <StyledInput
           placeholder="Navn"
-          autoFocus={true}
+          autoFocus={width > 768}
           onChange={({ target }) => setValue(prev => ({
             ...prev,
             name: target.value
