@@ -3,12 +3,16 @@ import { createGlobalStyle } from "styled-components";
 import Router from './Router/Router';
 import "animate.css";
 import Modal from './components/Modal/Modal';
+import useWindowDimensions from './commons/CustomHooks';
 
 const App = () => {
+  
+  let { width, height } = useWindowDimensions();
+  console.log("height: " + height);
   return (
     <>
       <Router />
-      <GlobalStyle />
+      <GlobalStyle height={height}/>
       <Modal />
     </>
   );
@@ -19,6 +23,10 @@ export default App;
 const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
+    }
+
+    :root {
+      --vh: ${({height}) => `${height*0.01}px`};
     }
 
     * {

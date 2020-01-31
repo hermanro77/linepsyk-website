@@ -12,7 +12,7 @@ const ModalForm = ({ closeModalAction }) => {
     message: "",
   });
 
-  const { height, width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   
   return (
     <>
@@ -98,11 +98,11 @@ const StyledInput = styled.input`
   font-family: "Poppins", sans-serif;
   border-radius: 4px;
   transition: 0.3s ease-in-out;
-  min-height: ${({message}) => message ? "100%" : "2rem"};
-  max-height: ${({message}) => message ? "100%" : "2rem"};
+  min-height: 2rem;
+  max-height: 2rem;
   padding: 26.5px 8px;
   border: 1.5px solid #9e9e9e;
-  margin: ${({message}) => message ? "0 10px 5px 10px" : "0 0 5px 0"};
+  margin: 0 0 5px 0;
 
   &::placeholder {
     opacity: 0.7;

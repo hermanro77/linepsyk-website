@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Burger from "./Burger";
 import { dispatch, useGlobalState } from '../../Store/State';
+import useWindowDimensions from "../../commons/CustomHooks";
 
 const setPage = (pageNum) => dispatch({
   page: pageNum,
@@ -12,10 +13,9 @@ const setPage = (pageNum) => dispatch({
 
 const Navbar = () => {
 
-      
+    const { width, height } = useWindowDimensions();  
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [globalStatePage] = useGlobalState('page');
-    const [globalStatemodal] = useGlobalState('showModal');
     
     useEffect(() => {
       setPathNameNum(window.location.pathname)
@@ -44,8 +44,6 @@ const Navbar = () => {
       }
     }
     
-
-    console.log("show: " + globalStatemodal);
     const handleOnClick = (burgerOpen, pageNumber) => {
       if (burgerOpen) setBurgerOpen(!burgerOpen);
       setPage(pageNumber);
@@ -112,8 +110,8 @@ export default Navbar;
 const StyledNavbarContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  min-height: calc(10vh);
-  max-height: calc(10vh);
+  min-height: calc(var(--vh) * 10);
+  max-height: calc(var(--vh) * 10);
   z-index: 1;
   width: 100%;
   position: fixed;
@@ -122,7 +120,7 @@ const StyledNavbarContainer = styled.div`
 `;
 
 const StyledLinkContainer = styled.div`
-  min-height: calc(10vh);
+  min-height: calc(var(--vh) * 10);
   width: 45%;
   display: flex;
   justify-content: space-around;
@@ -140,9 +138,9 @@ const StyledLinkContainer = styled.div`
   @media screen and (max-width: 768px){
     position: absolute;
     right: 0px;
-    height: 90vh;
+    height: calc(var(--vh) * 90);
     width: 50%;
-    top: 10vh;
+    top: calc(var(--vh) * 10);
     background-color: rgba(20, 20, 20, 0.9);
     display: flex;
     flex-direction: column;
@@ -166,10 +164,8 @@ const StyledLine = styled.div`
 
 
 const Div = styled.div`
-  @media screen and (max-width: 768px){
-    width: 100%
-    height: 100%;
-  }
+  width: 100%;
+  height: calc(var(--vh) * 90 / 4);
 `;
 
 const StyledLink = styled(Link)`
@@ -187,7 +183,7 @@ const StyledLink = styled(Link)`
   justify-content: center;
   height: 100%;
 
-  &:hover {
+  &:hover, &:focus, &:focus-within, &:active {
     cursor: pointer;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
     color: rgba(20, 20, 20, 0.8);
