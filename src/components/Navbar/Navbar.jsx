@@ -35,10 +35,18 @@ const Navbar = () => {
           setPage(2);
           break;
         
-        case '/kontakt':
+        case '/terapi':
           setPage(3);
           break;
+
+        case '/praktisk-info':
+          setPage(4);
+          break;
         
+        case '/kontakt':
+          setPage(5);
+          break;
+
         default: setPage(0);
       }
     }
@@ -95,12 +103,32 @@ const Navbar = () => {
 
           <Div>
             <StyledLink 
-            to={"/kontakt"} 
+            to={"/terapi"} 
             onClick={() => handleOnClick(burgerOpen, 3)}
+            >
+              Terapi
+            </StyledLink>
+            <StyledLine showLine={globalStatePage === 3} />
+          </Div>
+
+          <Div>
+            <StyledLink 
+            to={"/praktisk-info"} 
+            onClick={() => handleOnClick(burgerOpen, 4)}
+            >
+              Praktisk info
+            </StyledLink>
+            <StyledLine showLine={globalStatePage === 4} />
+          </Div>
+
+          <Div>
+            <StyledLink 
+            to={"/kontakt"} 
+            onClick={() => handleOnClick(burgerOpen, 5)}
             >
               Kontakt
             </StyledLink>
-            <StyledLine showLine={globalStatePage === 3} />
+            <StyledLine showLine={globalStatePage === 5} />
           </Div>
         </StyledLinkContainer>
 
@@ -146,14 +174,14 @@ const StyledNavbarContainer = styled.div`
 
 const StyledLinkContainer = styled.div`
   min-height: calc(var(--vh) * 10);
-  width: 45%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   background: transparent;
   align-items: center;
 
-  @media screen and (max-width: 970px){
-    width: 65%;
+  @media screen and (max-width: 1024px){
+    width: 80%;
   }
   
   @media screen and (max-width: 900px){
@@ -193,7 +221,7 @@ const Div = styled.div`
   height: 100%;
   @media screen and (max-width: 768px){
     width: 100%;
-    height: calc(var(--vh) * 90 / 4);
+    height: calc(var(--vh) * 90 / 6);
   }
 `;
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { StyledOuter, StyledContainer, HorizontalDiv } from "../../commons/StyledComponents";
-import Footer from "../Footer/Footer";
+import styled from "styled-components";
 
-const Home = () => {
+const Practicalinfo = () => {
 
     return (
       
@@ -17,4 +17,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Practicalinfo;

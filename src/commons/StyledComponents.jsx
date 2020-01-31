@@ -51,3 +51,7 @@ export const StyledContainer = styled.div`
     overflow: auto;
   }
 `;
+
+export const HorizontalDiv = styled.div`
+  
+`;

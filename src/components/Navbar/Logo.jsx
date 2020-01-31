@@ -20,7 +20,7 @@ const StyledLogo = styled(Link)`
   max-width: 17vw;
 
   @media screen and (max-width: 900px){
-    max-width: 35vw;
+    max-width: 25vw;
   }
 
   @media screen and (max-width: 768px){
