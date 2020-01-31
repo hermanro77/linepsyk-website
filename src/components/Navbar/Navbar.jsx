@@ -12,11 +12,10 @@ const setPage = (pageNum) => dispatch({
 });
 
 const Navbar = () => {
-
-    const { width, height } = useWindowDimensions();  
+ 
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [globalStatePage] = useGlobalState('page');
-    
+    console.log(burgerOpen);
     useEffect(() => {
       setPathNameNum(window.location.pathname)
       renderNavbar();
@@ -48,9 +47,18 @@ const Navbar = () => {
       if (burgerOpen) setBurgerOpen(!burgerOpen);
       setPage(pageNumber);
     }
+
+    const hideBurger = e => {
+      const { id } = e.target;
+      console.log("id: " + id);
+      console.log("open: " + burgerOpen);
+      if (id === "burgerBackground" && burgerOpen) setBurgerOpen(!burgerOpen);
+    }
     
     const renderNavbar = () => {
       return(
+        <>
+        <StyledBackground id="burgerBackground" onClick={hideBurger} open={burgerOpen}></StyledBackground>
         <StyledNavbarContainer>
         <Logo></Logo>
 
@@ -99,6 +107,7 @@ const Navbar = () => {
         <Burger open={burgerOpen} onClick={() => setBurgerOpen(!burgerOpen)}/>
 
       </StyledNavbarContainer>
+      </>
       ); 
     }
 
@@ -106,6 +115,22 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+
+const StyledBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 1;
+  display: ${({ open }) => open ? "" : "none"};
+  &:focus{
+    outline: none;
+  }
+`;
 
 const StyledNavbarContainer = styled.div`
   display: flex;
