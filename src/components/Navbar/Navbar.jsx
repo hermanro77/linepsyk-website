@@ -144,6 +144,7 @@ const StyledLinkContainer = styled.div`
     background-color: rgba(20, 20, 20, 0.9);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     transform: ${({open}) => open ? "translateX(0%)" : "translateX(100%)"};
   }
@@ -164,8 +165,11 @@ const StyledLine = styled.div`
 
 
 const Div = styled.div`
-  width: 100%;
-  height: calc(var(--vh) * 90 / 4);
+  height: 100%;
+  @media screen and (max-width: 768px){
+    width: 100%;
+    height: calc(var(--vh) * 90 / 4);
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -183,7 +187,7 @@ const StyledLink = styled(Link)`
   justify-content: center;
   height: 100%;
 
-  &:hover, &:focus, &:focus-within, &:active {
+  &:hover, &:active {
     cursor: pointer;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
     color: rgba(20, 20, 20, 0.8);
