@@ -62,6 +62,7 @@ const ButtonCont = styled.div`
     flex-direction: column;
     width: 100%;
     padding-top: 0px;
+    padding: 0 2rem;
   }
 `;
 
@@ -104,8 +105,8 @@ const StyledButton = styled.button`
   }
 
   @media screen and (max-width: 768px) {
-    max-width: 80%;
-    min-width: 80%;
+    max-width: 95%;
+    min-width: 95%;
     margin: 0 auto;
     margin-top: 2rem;
   }

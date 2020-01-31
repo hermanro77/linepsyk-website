@@ -29,11 +29,8 @@ export default ModalContent;
 
 
 const Popup = styled.div`
-  opacity: 1;
-  visibility: visible;
   height: 500px;
   width: 50%;
-  flex-shrink: 0;
   border-radius: 3px;
   position: relative;
   z-index: 3;

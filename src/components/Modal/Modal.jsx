@@ -11,9 +11,6 @@ const Modal = () => {
   
   const [showModal] = useGlobalState("showModal");
   
-  console.log("show: " + showModal);
-
-
   const ESCAPE_KEY = 27;
   const hideOnESC = e => {
     if (e.keyCode === ESCAPE_KEY) {
@@ -65,10 +62,5 @@ const StyledModal = styled.div`
 
   &:focus{
     outline: none;
-  }
-
-  @media screen and (max-width: 768px){
-    flex-direction: column;
-    
   }
 `;

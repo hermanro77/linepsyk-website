@@ -17,37 +17,39 @@ const ModalForm = ({ closeModalAction }) => {
   return (
     <>
       <StyledHorCont>
-      <StyledVerticalCont>
-        <StyledInput
-          placeholder="Navn"
-          autoFocus={width > 768}
-          onChange={({ target }) => setValue(prev => ({
-            ...prev,
-            name: target.value
-          }))}
-        />
-        <StyledInput
-          placeholder="Email"
-          onChange={({ target }) => setValue(prev => ({
-            ...prev,
-            email: target.value
-          }))}
-        />
-        <StyledInput
-          placeholder="Tlf"
-          onChange={({ target }) => setValue(prev => ({
-            ...prev,
-            phone: target.value
-          }))}
-        />
-      </StyledVerticalCont>
+        <StyledVerticalCont>
+          <StyledInput
+            placeholder="Navn"
+            autoFocus={width > 768}
+            onChange={({ target }) => setValue(prev => ({
+              ...prev,
+              name: target.value
+            }))}
+          />
+          <StyledInput
+            placeholder="Email"
+            onChange={({ target }) => setValue(prev => ({
+              ...prev,
+              email: target.value
+            }))}
+          />
+          <StyledInput
+            placeholder="Tlf"
+            onChange={({ target }) => setValue(prev => ({
+              ...prev,
+              phone: target.value
+            }))}
+          />
+        </StyledVerticalCont>
+        
       <StyledTextArea
-          placeholder="Message"
+          placeholder="Melding"
           onChange={({ target }) => setValue(prev => ({
             ...prev,
             message: target.value
           }))}
         />
+        
       </StyledHorCont>
       <ModalButton value={value} closeModalAction={closeModalAction} />
     </>
@@ -61,7 +63,6 @@ const StyledVerticalCont = styled.div`
   flex-direction: column;
   z-index: 5;
   width: auto;
-  height: fit-content;
   margin: 0 10px 0 10px;
 
   @media screen and (max-width: 768px){
@@ -75,16 +76,11 @@ const StyledHorCont = styled.div`
   z-index: 5;
   align-items: center;
   width: 100%;
-  height: fit-content;
   padding: 0 2rem;
-  
+  min-height: fit-content;
 
   @media screen and (max-width: 768px){
-    padding: 0px;
     flex-direction: column;
-    *{
-      margin-bottom: 5px;
-    }
   }
 `;
 
@@ -106,8 +102,6 @@ const StyledInput = styled.input`
 
   &::placeholder {
     opacity: 0.7;
-    top: 0;
-    left: 0;
   }
   &:focus,
   &:active {
@@ -116,8 +110,8 @@ const StyledInput = styled.input`
   }
 
   @media screen and (max-width: 768px) {
-    max-width: 80%;
-    min-width: 80%;
+    max-width: 95%;
+    min-width: 95%;
     margin: 0 auto 5px auto;
     min-height: 2rem;
   }
@@ -135,6 +129,9 @@ const StyledTextArea = styled.textarea`
   transition: 0.3s ease-in-out;
   min-height: 100%;
   max-height: 100%;
+
+  
+
   margin: 0 10px 5px 10px;
   padding: 26.5px 8px;
   border: 1.5px solid #9e9e9e;
@@ -152,8 +149,8 @@ const StyledTextArea = styled.textarea`
   }
 
   @media screen and (max-width: 768px) {
-    max-width: 80%;
-    min-width: 80%;
+    max-width: 95%;
+    min-width: 95%;
     margin: 0 auto 5px auto;
     min-height: 2rem;
     height: 200px;
