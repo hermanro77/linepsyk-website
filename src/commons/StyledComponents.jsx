@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledOuter = styled.main`
-  height: 100%;
+  height: calc(var(--vh) * 100);
+  
   display: flex;
   background-image: url("/images/river.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-block-size: -webkit-fill-available;
-  overflow: scroll;
+  overflow: hidden;
 `;
 
 
@@ -18,8 +19,9 @@ export const StyledOuter = styled.main`
 
 export const StyledContainer = styled.div`
   padding: 2rem;
-  min-height: calc(90vh - 6rem);
-  max-height: calc(90vh - 6rem);
+  min-height: calc(var(--vh) * 90 - 6rem);
+  max-height: calc(var(--vh) * 90 - 6rem);
+  
   width: 100vh;
   min-width: calc(95% - 12rem);
   max-width: calc(95% - 12rem);
@@ -32,7 +34,8 @@ export const StyledContainer = styled.div`
   overflow: auto;
 
   @media screen and (max-width: 1400px) {
-    min-height: calc(94vh - 4rem);
+    min-height: calc(var(--vh) * 94 - 4rem);
+    
     min-width: calc(95%);
     margin: auto;
     margin-top: 5rem;
