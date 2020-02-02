@@ -15,9 +15,10 @@ const Navbar = () => {
  
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [globalStatePage] = useGlobalState('page');
-    console.log(burgerOpen);
+    console.log("globalStatePage Navbar: " + globalStatePage);
+
     useEffect(() => {
-      setPathNameNum(window.location.pathname)
+      setPathNameNum(window.location.pathname);
       renderNavbar();
     }, [window.location.pathname]);
 
@@ -58,8 +59,6 @@ const Navbar = () => {
 
     const hideBurger = e => {
       const { id } = e.target;
-      console.log("id: " + id);
-      console.log("open: " + burgerOpen);
       if (id === "burgerBackground" && burgerOpen) setBurgerOpen(!burgerOpen);
     }
     
@@ -75,6 +74,7 @@ const Navbar = () => {
             <StyledLink 
             to={"/hjem"} 
             onClick={() => handleOnClick(burgerOpen, 0)}
+            active={globalStatePage === 0}
             >
             Hjem
             </StyledLink>
@@ -85,6 +85,7 @@ const Navbar = () => {
             <StyledLink 
             to={"/om-gestalt"} 
             onClick={() => handleOnClick(burgerOpen, 1)}
+            active={globalStatePage === 1}
             >
               Om gestalt
             </StyledLink>
@@ -95,6 +96,7 @@ const Navbar = () => {
             <StyledLink 
             to={"/om-line"} 
             onClick={() => handleOnClick(burgerOpen, 2)}
+            active={globalStatePage === 2}
             >
               Om Line
             </StyledLink>
@@ -105,6 +107,7 @@ const Navbar = () => {
             <StyledLink 
             to={"/terapi"} 
             onClick={() => handleOnClick(burgerOpen, 3)}
+            active={globalStatePage === 3}
             >
               Terapi
             </StyledLink>
@@ -115,6 +118,7 @@ const Navbar = () => {
             <StyledLink 
             to={"/praktisk-info"} 
             onClick={() => handleOnClick(burgerOpen, 4)}
+            active={globalStatePage === 4}
             >
               Praktisk info
             </StyledLink>
@@ -125,6 +129,7 @@ const Navbar = () => {
             <StyledLink 
             to={"/kontakt"} 
             onClick={() => handleOnClick(burgerOpen, 5)}
+            active={globalStatePage === 5}
             >
               Kontakt
             </StyledLink>
@@ -168,7 +173,7 @@ const StyledNavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   position: fixed;
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: rgba(20, 20, 20, 0.75);
   align-items: center;
 `;
 
@@ -209,7 +214,7 @@ const StyledLine = styled.div`
   height: 2px;
   width: 100%;
   border-radius: 100px;
-  display: ${({ showLine }) => showLine ? "" : "none"};
+  display: ${({ showLine }) => showLine ? "none" : "none"};
 
   @media screen and (max-width: 768px){
     display: none;
@@ -225,7 +230,7 @@ const Div = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   background: transparent;
   color: white;
   font-size: 1em;
@@ -240,10 +245,21 @@ const StyledLink = styled(Link)`
   justify-content: center;
   height: 100%;
 
+  @media screen and (min-width: 769px){
+    background: ${({active}) => active ? "-webkit-linear-gradient(#43c6ac, #f8ffae)" : "" };
+    -webkit-background-clip: ${({active}) => active ? "text" : ""};
+    -webkit-text-fill-color: ${({active}) => active ? "transparent" : ""};
+  }
+  
+
   &:hover, &:active {
     cursor: pointer;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
     color: rgba(20, 20, 20, 0.8);
+    
+    -webkit-background-clip: rgba(20, 20, 20, 0.8);
+    -webkit-text-fill-color: rgba(20, 20, 20, 0.8);
+
     border-radius: 4px;
     border: none;
   }
@@ -251,5 +267,8 @@ const StyledLink = styled(Link)`
   @media screen and (max-width: 768px){
     width: 100%;
     height: 100%;
+    background: ${({active}) => active ? "linear-gradient(to right, #43c6ac, #f8ffae)" : ""};
+    border-radius: 4px;
+    border: none;
   }
 `; 

@@ -13,13 +13,13 @@ const Router = () => {
         <BrowserRouter>
             <Navbar />
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/hjem" component={Home} />
-                <Route exact path="/om-line" component={AboutLine} />
-                <Route exact path="/om-gestalt" component={AboutGestalt} />
-                <Route exact path="/terapi" component={Therapy} />
-                <Route exact path="/praktisk-info" component={Practicalinfo} />
-                <Route exact path="/kontakt" component={Contact} />
+                <Route exact path="/" render={props => <><Navbar/><Home /></>} />
+                <Route exact path="/hjem" render={props => <><Navbar/><Home /></>} />
+                <Route exact path="/om-line" render={props => <><Navbar/><AboutLine /></>} />
+                <Route exact path="/om-gestalt" render={props => <><Navbar/><AboutGestalt /></>} />
+                <Route exact path="/terapi" render={props => <><Navbar/><Therapy /></>} />
+                <Route exact path="/praktisk-info" render={props => <><Navbar/><Practicalinfo /></>} />
+                <Route exact path="/kontakt" render={props => <><Navbar/><Contact /></>} />
             </Switch>
         </BrowserRouter>        
     );

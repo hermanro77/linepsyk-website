@@ -116,6 +116,7 @@ export const StyledVerticalContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
+  min-height: fit-content;
   
   @media screen and (max-width: 768px){
     width: 100%;

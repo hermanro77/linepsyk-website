@@ -1,6 +1,5 @@
 import React from "react";
-import { StyledOuter, StyledContainer, HorizontalDiv } from "../../commons/StyledComponents";
-import styled from "styled-components";
+import { StyledOuter, StyledContainer } from "../../commons/StyledComponents";
 
 const Therapy = () => {
 
@@ -8,9 +7,7 @@ const Therapy = () => {
       
       <StyledOuter>
         <StyledContainer className="animated fadeIn">
-          <HorizontalDiv>
 
-          </HorizontalDiv>
         </StyledContainer>   
       </StyledOuter>
       
