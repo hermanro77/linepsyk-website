@@ -32,6 +32,7 @@ export const StyledContainer = styled.div`
   margin-left: 5rem;
   margin-right: auto;
   overflow: auto;
+  
 
   @media screen and (max-width: 1400px) {
     min-height: calc(var(--vh) * 94 - 4rem);
@@ -50,8 +51,4 @@ export const StyledContainer = styled.div`
     padding: 1rem;
     overflow: auto;
   }
-`;
-
-export const HorizontalDiv = styled.div`
-  
 `;

@@ -29,10 +29,11 @@ const StyledBurger = styled.div`
     border-radius: 2px;
     transition: all 0.4s linear;
 
-    background: ${({ open }) => open ? 'linear-gradient(to right, #43c6ac, #f8ffae)' : 'rgb(226, 226, 226)'};
+    background: ${({ open }) => open ? 'linear-gradient(to right, #43c6ac, #f8ffae)' : 'white'};
     
 
     :first-child{
+      
       transform: ${({ open }) => open ? 'rotate(45deg) translate(5px,7px)' : 'rotate(0)'};
     }
     :nth-child(2){
@@ -40,6 +41,7 @@ const StyledBurger = styled.div`
       transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
     }
     :nth-child(3){
+      
       transform: ${({ open }) => open ? 'rotate(-45deg) translate(5px,-7px)' : 'rotate(0)'};
     }
   }

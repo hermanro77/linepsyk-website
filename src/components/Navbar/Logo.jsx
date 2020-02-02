@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Logo = () => {
 
     return (
-        <StyledLogo to={"/"}>
+        <StyledLogo to={"/hjem"}>
           <img alt="" src="images/onlinelogomaker-012120-2235-9444.png" />
         </StyledLogo>
     );

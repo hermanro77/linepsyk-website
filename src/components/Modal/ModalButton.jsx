@@ -17,16 +17,13 @@ const ModalButton = ({ value, closeModalAction }) => {
       message = message.trim();
 
       if (!name) {
-        return setError("Please enter a name");
+        return setError("Not valid name");
       }
-      else if (!email) {
-        return setError("Please enter a email");
+      else if (!email || !email.includes("@")) {
+        return setError("Not valid email");
       }
-      else if (!phone) {
-        return setError("Please enter a phone number");
-      }
-      else if (!message) {
-        return setError("Please enter a message");
+      else if (!phone || isNaN(phone) || phone.length != 8) {
+        return setError("Not valid number");
       }
 
       closeModalAction();
@@ -50,7 +47,7 @@ const ModalButton = ({ value, closeModalAction }) => {
 
 export default ModalButton;
 
-const ButtonCont = styled.div`
+export const ButtonCont = styled.div`
   display: flex;
   justify-content: space-between;
   width: 500px;
@@ -66,7 +63,7 @@ const ButtonCont = styled.div`
   }
 `;
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
     margin-top: 2rem;
     padding: 0.25rem 1rem;
     border: none;
@@ -87,11 +84,11 @@ const StyledButton = styled.button`
     color: #E5F3F3;
     font-size: 0.9rem
     min-width:  225px;
-    min-height: 55px
+    min-height: 55px;
     border: none;
     font-weight: 800;
     
-	&:hover, &:focus, &:active {
+	&:hover, &:active {
 		opacity: 0.8;
   }
   
@@ -117,7 +114,8 @@ const StyledError = styled.h5`
   text-align: center;
   min-height: 30px;
   color: #ed213a;
-  margin-top: 2rem;
+  margin: 2rem auto;
+  margin-bottom: 0;
   display: ${({show}) => show ? "block" : "none"};
 `;
 
