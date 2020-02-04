@@ -15,7 +15,7 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const StyledHeader = styled.h1`
