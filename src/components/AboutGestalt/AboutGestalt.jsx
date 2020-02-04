@@ -8,6 +8,7 @@ import { User } from "react-feather";
 import Header from "../../commons/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { q3 } from "../../commons/Quotes";
 
 const AboutGestalt = () => {
 
@@ -23,7 +24,7 @@ const AboutGestalt = () => {
     <StyledOuter>
       <StyledContainer style={{textAlign: "center"}} className="animated fadeIn">
 
-        <Header text={"om gestalt"}></Header>
+        <Header text={"om gestalt"} quote={q3}></Header>
 
         <StyledHorizontalContainer>
           <Paragraph displayLesMer headertext={"Grunnleggende ideer"} text={grunnleggende_ideer}>
