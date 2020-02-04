@@ -129,11 +129,8 @@ const StyledTextArea = styled.textarea`
   transition: 0.3s ease-in-out;
   min-height: 100%;
   max-height: 100%;
-
-  
-
   margin: 0 10px 5px 10px;
-  padding: 26.5px 8px;
+  padding: 16px 8px;
   border: 1.5px solid #9e9e9e;
   width: 100%;
 
