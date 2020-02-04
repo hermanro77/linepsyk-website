@@ -1,10 +1,27 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Check, X } from "react-feather";
-
+import {useAlert} from "react-alert";
 
 const ModalButton = ({ value, closeModalAction }) => {
     const [error, setError] = useState("");
+    const alert = useAlert();
+
+    const showAlert  = () => {
+      alert.show("Email successfully sent!");
+    }
+    
+    const sendFeedback = (templateId, variables) => {
+      window.emailjs.send(
+        'line_rommetveit', templateId,
+        variables
+        ).then(res => {
+          alert.show("Email successfully sent!");
+        })
+        // Handle errors here however you like, or use a React error boundary
+        .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+        
+    };
 
     const saveBooking = () => {
       setError("");
@@ -25,7 +42,10 @@ const ModalButton = ({ value, closeModalAction }) => {
       else if (!phone || isNaN(phone) || phone.length != 8) {
         return setError("Not valid number");
       }
-
+      
+      const templateId = 'template_NqSXqNeN';
+      sendFeedback(templateId, {from_name: name, reply_to: email, message: message, phone: phone});
+      
       closeModalAction();
     };
 

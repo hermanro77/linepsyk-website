@@ -7,9 +7,8 @@ const AboutGestalt = () => {
   return (
     <StyledOuter>
       <StyledContainer className="animated fadeIn">
-        <h3 style={{color: "white"}}>Gestalt</h3>
         <ResponsivePlayer url={"https://www.youtube.com/watch?v=NXBRbdQYCqA"} />
-        <Footer></Footer>
+        
       </StyledContainer>  
     </StyledOuter>
   );

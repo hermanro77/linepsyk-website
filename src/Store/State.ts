@@ -8,7 +8,7 @@ type State = {
 };
 
 type Action =
-  | { type: 'setPage'; page: Number }
+  | { type: 'setPage'; page: number }
   | { type: 'closeModalAction'; }
   | { type: 'showModalAction'; };
 

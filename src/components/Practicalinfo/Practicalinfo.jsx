@@ -4,9 +4,7 @@ import ReadMoreReact from 'read-more-react';
 import styled from "styled-components";
 
 const Practicalinfo = () => {
-
     return (
-      
       <StyledOuter>
         <StyledContainer className="animated fadeIn">
 

@@ -52,3 +52,25 @@ export const StyledContainer = styled.div`
     overflow: auto;
   }
 `;
+
+export const StyledAlert = styled.div`
+  background: linear-gradient(to top, #43c6ac, #f8ffae);
+  color: white;
+  font-size: 20px;
+  border-radius: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  min-width: 300px;
+  justify-content: center;
+
+  @media screen and (max-width: 768px){
+    min-height: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    margin-top: 5rem;
+    text-align: center;
+  }
+`;
