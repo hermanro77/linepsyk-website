@@ -3,20 +3,20 @@ import styled, { css } from "styled-components";
 import { ChevronDown, ChevronUp } from "react-feather";
 import ParagraphHeader from "./ParagraphHeader";
 
-const Paragraph = ({ headertext, text, children }) => {
+const Paragraph = ({ headertext, text, children, displayLesMer, style, comp }) => {
   const [show, setShow] = useState(false);
   return(
-    <StyledParagraph>
+    <StyledParagraph style={style}>
       {children}
       <ParagraphHeader text={headertext}></ParagraphHeader>
       
-      <TexContainer showfullcontent={show}>
-        {text.split('\n').map((item, key) => {
-          return <span key={key}>{item}<br/><br/></span>
-        })}
+      <TexContainer display={displayLesMer} showfullcontent={show}>
+        {text ? text.split('\n').map((item, key) => {
+          return displayLesMer ? <span key={key}>{item}<br/><br/></span> : <span key={key}>{item}<br/></span>
+        }) : comp}
       </TexContainer>
       <div style={{display: "flex", justifyContent: "center"}}>
-      <StyledLesMer show={show} onClick={() => setShow(!show)}>
+      <StyledLesMer display={displayLesMer} show={show} onClick={() => setShow(!show)}>
         {show ? <><ChevronUp/><p>Les mindre</p></> : <><p>Les mer</p><ChevronDown/></>}
       </StyledLesMer>
       </div>
@@ -29,7 +29,7 @@ export default Paragraph;
 const StyledLesMer = styled.div`
   text-align: center;
   align-items: center;
-  display: flex;
+  display: ${({display}) => display ? "flex" : "none"};
   flex-direction: column;
   line-height: 0.1em;
   margin: 1rem 0 20px;
@@ -79,7 +79,13 @@ const StyledLesMer = styled.div`
 
 const StyledParagraph = styled.div`
   text-align: center;
-  align-items: center; 
+  align-items: center;
+  width: 100%; 
+  margin-top: 1rem;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 `;
 
 const activeStyles = `
@@ -116,5 +122,5 @@ const TexContainer = styled.div`
   margin: 1rem 0 0 0;
   padding: 0 1rem;
 
-  ${({showfullcontent}) => showfullcontent ? css`${activeStyles}` : css`${noneActiveStyles2}`}
+  ${({showfullcontent, display}) => showfullcontent || !display ? css`${activeStyles}` : css`${noneActiveStyles2}`}
 `;

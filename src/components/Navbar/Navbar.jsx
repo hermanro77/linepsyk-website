@@ -39,7 +39,7 @@ const Navbar = () => {
           setPage(3);
           break;
 
-        case '/praktisk-info':
+        case '/priser-info':
           setPage(4);
           break;
         
@@ -115,11 +115,11 @@ const Navbar = () => {
 
           <Div>
             <StyledLink 
-            to={"/praktisk-info"} 
+            to={"/priser-info"} 
             onClick={() => handleOnClick(burgerOpen, 4)}
             active={globalStatePage === 4}
             >
-              Praktisk info
+              Priser & info
             </StyledLink>
             <StyledLine showLine={globalStatePage === 4} />
           </Div>

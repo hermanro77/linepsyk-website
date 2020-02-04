@@ -3,7 +3,7 @@ import { StyledVerticalContainer } from "../Footer/Info";
 import { ButtonCont } from "../Modal/ModalButton";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { dispatch, useGlobalState } from "../../Store/State";
+import { dispatch } from "../../Store/State";
 import useWindowDimensions from "../../commons/CustomHooks";
 
 const showModalAction = () => dispatch({
@@ -51,15 +51,14 @@ const HomeButtons = () => {
         </HomeButton>
       </StyledVerticalContainer>
       <StyledVerticalContainer className={width > 768 ? "animated bounceInDown delay-1s" : ""}>
-        <HomeButton to={"/praktisk-info"} transformdown={"true"}>
+        <HomeButton to={"/priser-info"} transformdown={"true"}>
           <StyledSpan>P</StyledSpan>
           <StyledSpan>r</StyledSpan>
-          <StyledSpan>a</StyledSpan>
-          <StyledSpan>k</StyledSpan>
-          <StyledSpan>t</StyledSpan>
           <StyledSpan>i</StyledSpan>
           <StyledSpan>s</StyledSpan>
-          <StyledSpan>k&nbsp;</StyledSpan>
+          <StyledSpan>e</StyledSpan>
+          <StyledSpan>r&nbsp;</StyledSpan>
+          <StyledSpan>&&nbsp;</StyledSpan>
           <StyledSpan>i</StyledSpan>
           <StyledSpan>n</StyledSpan>
           <StyledSpan>f</StyledSpan>

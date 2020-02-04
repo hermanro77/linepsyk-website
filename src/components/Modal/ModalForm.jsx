@@ -43,7 +43,7 @@ const ModalForm = ({ closeModalAction }) => {
         </StyledVerticalCont>
         
       <StyledTextArea
-          placeholder="Melding"
+          placeholder="Melding (valgfritt)"
           onChange={({ target }) => setValue(prev => ({
             ...prev,
             message: target.value

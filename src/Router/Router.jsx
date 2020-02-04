@@ -18,7 +18,7 @@ const Router = () => {
                 <Route exact path="/om-line" render={props => <><Navbar/><AboutLine /></>} />
                 <Route exact path="/om-gestalt" render={props => <><Navbar/><AboutGestalt /></>} />
                 <Route exact path="/terapi" render={props => <><Navbar/><Therapy /></>} />
-                <Route exact path="/praktisk-info" render={props => <><Navbar/><Practicalinfo /></>} />
+                <Route exact path="/priser-info" render={props => <><Navbar/><Practicalinfo /></>} />
                 <Route exact path="/kontakt" render={props => <><Navbar/><Contact /></>} />
             </Switch>
         </BrowserRouter>        
