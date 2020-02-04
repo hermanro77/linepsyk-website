@@ -27,6 +27,8 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
   height: fit-content;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 500;
 
   @media screen and (max-width: 768px){
     flex-direction: column;

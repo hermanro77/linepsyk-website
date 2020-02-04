@@ -34,7 +34,6 @@ const SocialFollowContainer = styled.div`
   justify-content: center;
   background-color: transparent;
   padding: 25px 50px;
-  text-align: center;
   margin-left: 8vw;
 
   @media screen and (max-width: 768px){

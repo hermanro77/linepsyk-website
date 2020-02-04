@@ -22,6 +22,8 @@ export const StyledContainer = styled.div`
   min-height: calc(var(--vh) * 90 - 6rem);
   max-height: calc(var(--vh) * 90 - 6rem);
   
+  text-align: center;
+
   width: 100vh;
   min-width: calc(95% - 12rem);
   max-width: calc(95% - 12rem);

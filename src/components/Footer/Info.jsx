@@ -46,7 +46,6 @@ export const StyledMailLink = styled.a`
   align-items: center;
   padding: 0.5rem;
   margin-right: 10px;
-
   font-size: 1.2vw;
 
   &:not(:last-child){
@@ -56,7 +55,7 @@ export const StyledMailLink = styled.a`
   &:hover {
     cursor: pointer;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
-    color: rgba(20, 20, 20, 0.7);
+    color: rgba(20, 20, 20, 0.8);
     border-radius: 4px;
     margin-right: 10px;
     

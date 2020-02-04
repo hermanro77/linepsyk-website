@@ -41,6 +41,7 @@ const StyledLesMer = styled.div`
     padding:0 10px; 
   }
 
+
   &:hover{
     cursor: pointer;
     color: palevioletred;
@@ -57,6 +58,10 @@ const StyledLesMer = styled.div`
     min-width: 50%;
     max-height: fit-content;
     margin-top: 1rem;
+    
+    p {
+      display: none;
+    }
 
     &:focus{
       cursor: pointer;

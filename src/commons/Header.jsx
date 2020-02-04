@@ -10,7 +10,7 @@ const Header = ({text}) => {
 export default Header;
 
 const StyledHeader = styled.h1`
-  margin: 2rem auto;
+  margin: 0 0 2rem 0;
   font-size: 2.5rem;
   font-weight: 600;
   font-family: 'Permanent Marker', cursive;

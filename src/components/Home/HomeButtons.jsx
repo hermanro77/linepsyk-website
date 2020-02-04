@@ -191,6 +191,7 @@ const BestillTimeButton = styled.div`
     border-radius: 4px;
     transition: 0.3s ease-in-out;
     font-family: 'Poppins', sans-serif;
+    font-family: 'Permanent Marker', cursive;
     transform: scale(1.001);
     position: relative;
     line-height: 2rem;
