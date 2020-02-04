@@ -17,8 +17,7 @@ const Paragraph = ({ headertext, text, children }) => {
       </TexContainer>
       <div style={{display: "flex", justifyContent: "center"}}>
       <StyledLesMer show={show} onClick={() => setShow(!show)}>
-        <p>Les {!show ? "mer" : "mindre"}</p>
-        {show ? <ChevronUp /> : <ChevronDown />}
+        {show ? <><ChevronUp/><p>Les mindre</p></> : <><p>Les mer</p><ChevronDown/></>}
       </StyledLesMer>
       </div>
     </StyledParagraph>
@@ -33,9 +32,9 @@ const StyledLesMer = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 0.1em;
-  margin: 0 0 20px;
+  margin: 1rem 0 20px;
   max-width: fit-content;
-  color: ${({show}) => show ? "palevioletred" : "white"};
+  color: white;
 
   span { 
     background:#fff; 
@@ -44,10 +43,10 @@ const StyledLesMer = styled.div`
 
   &:hover{
     cursor: pointer;
-    color: ${({show}) => show ? "white" : "palevioletred"};
+    color: palevioletred;
     
     * {
-      color: ${({show}) => show ? "white" : "palevioletred"};
+      color: palevioletred;
     }
   }
 
