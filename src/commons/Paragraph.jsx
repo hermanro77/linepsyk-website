@@ -50,6 +50,27 @@ const StyledLesMer = styled.div`
       color: ${({show}) => show ? "white" : "palevioletred"};
     }
   }
+
+  @media screen and (max-width: 768px){
+    background: palevioletred;
+    color: white;
+    border-radius: 6px;
+    min-width: 50%;
+    max-height: fit-content;
+    margin-top: 1rem;
+
+    &:focus{
+      cursor: pointer;
+      color: palevioletred;
+      background: white;
+    }
+    &:hover{
+      *{
+        color: white;
+      }
+    }
+
+  }
 `;
 
 const StyledParagraph = styled.div`

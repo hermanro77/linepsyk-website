@@ -27,7 +27,7 @@ const StyledBurger = styled.div`
     height: 4px;
     margin: 5px;
     border-radius: 2px;
-    transition: all 0.4s linear;
+    transition: all 0.6s linear;
 
     background: ${({ open }) => open ? 'linear-gradient(to right, #43c6ac, #f8ffae)' : 'white'};
     
