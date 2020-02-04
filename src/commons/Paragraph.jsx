@@ -15,11 +15,12 @@ const Paragraph = ({ headertext, text, children }) => {
           return <span key={key}>{item}<br/><br/></span>
         })}
       </TexContainer>
-      
+      <div style={{display: "flex", justifyContent: "center"}}>
       <StyledLesMer show={show} onClick={() => setShow(!show)}>
         <p>Les {!show ? "mer" : "mindre"}</p>
         {show ? <ChevronUp /> : <ChevronDown />}
       </StyledLesMer>
+      </div>
     </StyledParagraph>
   );
 }
@@ -31,9 +32,9 @@ const StyledLesMer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-   
   line-height: 0.1em;
   margin: 0 0 20px;
+  max-width: fit-content;
   color: ${({show}) => show ? "palevioletred" : "white"};
 
   span { 
@@ -53,6 +54,7 @@ const StyledLesMer = styled.div`
 
 const StyledParagraph = styled.div`
   text-align: center;
+  align-items: center; 
 `;
 
 const activeStyles = `
@@ -68,15 +70,26 @@ const noneActiveStyles = `
   text-overflow: ellipsis;
 `;
 
+const noneActiveStyles2 = `
+  width: 100%;
+  overflow: hidden;
+
+  p {
+    margin: 0;
+  }
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical; 
+  }
+`;
+
 
 const TexContainer = styled.div`
   text-align: left;
   color: white;
-  margin: 2rem 0 0 0;
+  margin: 1rem 0 0 0;
+  padding: 0 1rem;
 
-  ${({showfullcontent}) => showfullcontent ? css`${activeStyles}` : css`${noneActiveStyles}`}
-`;
-
-const OuterTextContainer = styled.div`
-  overflow-y: visible;
+  ${({showfullcontent}) => showfullcontent ? css`${activeStyles}` : css`${noneActiveStyles2}`}
 `;

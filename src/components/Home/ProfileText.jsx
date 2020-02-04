@@ -21,17 +21,13 @@ export default ProfileText;
 export const StyledText = styled.div`
   margin-top: 2rem;
   padding: 0;
-  font-size: 2.5em;
+  font-size: 2.4em;
   font-weight: 900;
-  color: #fff;
-  overflow: hidden;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
 
   @media screen and (max-width: 950px){
     font-size: 1.5em;
   }
-`;
-
-export const StyledSpan = styled.span`
-  display: inline-block;
 `;
 

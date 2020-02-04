@@ -3,7 +3,6 @@ import { StyledVerticalContainer } from "../Footer/Info";
 import { ButtonCont } from "../Modal/ModalButton";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { StyledSpan } from "./ProfileText";
 import { dispatch, useGlobalState } from "../../Store/State";
 import useWindowDimensions from "../../commons/CustomHooks";
 
@@ -96,6 +95,9 @@ const HomeButtons = () => {
 }
 
 export default HomeButtons;
+const StyledSpan = styled.span`
+  display: inline-block;
+`;
 
 const HomeButton = styled(Link)`
   font-size: 1rem
@@ -116,6 +118,7 @@ const HomeButton = styled(Link)`
   transition: 0.3s ease-in-out;
   background-color: transparent;
   color: white;
+  font-family: 'Permanent Marker', cursive;
 
   display: flex;
   align-items: center;
@@ -162,6 +165,7 @@ const BestillTimeButton = styled.div`
   transition: 0.3s ease-in-out;
   background-color: transparent;
   color: white;
+  font-family: 'Permanent Marker', cursive;
   transform: ${({transformup}) => transformup ? "translateY(-45px)" : ""};
   transform: ${({transformdown}) => transformdown ? "translateY(45px)" : ""};
   
