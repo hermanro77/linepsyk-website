@@ -6,9 +6,7 @@ import Modal from './components/Modal/Modal';
 import useWindowDimensions from './commons/CustomHooks';
 
 const App = () => {
-  
   let { width, height } = useWindowDimensions();
-  console.log("height: " + height);
   return (
     <>
       <Router />

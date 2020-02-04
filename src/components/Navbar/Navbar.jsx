@@ -15,7 +15,6 @@ const Navbar = () => {
  
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [globalStatePage] = useGlobalState('page');
-    console.log("globalStatePage Navbar: " + globalStatePage);
 
     useEffect(() => {
       setPathNameNum(window.location.pathname);
