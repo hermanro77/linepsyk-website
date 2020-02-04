@@ -9,15 +9,15 @@ const Header = ({text}) => {
 
 export default Header;
 
-const StyledHeader = styled.h2`
+const StyledHeader = styled.h1`
   margin: auto;
-  color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  font-family: 'Permanent Marker', cursive;
   text-transform: uppercase;
-
-  @media screen and (max-width: 600px) {
-    font-size: 2.75rem;
-    top: 14rem;
+  color: white;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
