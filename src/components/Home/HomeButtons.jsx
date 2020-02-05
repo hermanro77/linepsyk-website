@@ -196,7 +196,7 @@ const BestillTimeButton = styled.div`
     line-height: 2rem;
     background-color: #6927ff;
     color: #E5F3F3;
-    font-size: 1rem
+    font-size: 1rem;
     min-width:  225px;
     min-height: 55px;
     border: none;
@@ -205,10 +205,9 @@ const BestillTimeButton = styled.div`
     transform: none;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
 
-    &:hover, &:active{
+    &:hover {
       background: linear-gradient(to right, #43c6ac, #f8ffae);
-      color: rgba(20, 20, 20, 0.8);
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
   }

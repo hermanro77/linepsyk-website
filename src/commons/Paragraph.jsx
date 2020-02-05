@@ -55,9 +55,10 @@ const StyledLesMer = styled.div`
     background: palevioletred;
     color: white;
     border-radius: 6px;
-    min-width: 50%;
-    max-height: fit-content;
+    min-width: 25%;
+    min-height: 2rem;
     margin-top: 1rem;
+    justify-content: center;
     
     p {
       display: none;
