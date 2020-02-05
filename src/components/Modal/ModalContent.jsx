@@ -17,7 +17,7 @@ const ModalContent = ({ closeModalAction }) => {
           </Backgrounds>
           <StyledHeading>Bestill time</StyledHeading>
           <StyledDesc>
-            En email vil sendes til Line og hun vil kontakte deg straks!
+            Dette er ingen endelig avtale. En email vil sendes til Line og hun vil kontakte deg straks med avtale om time!
           </StyledDesc>
           <ModalForm closeModalAction={closeModalAction}></ModalForm>
         </PopupInside>

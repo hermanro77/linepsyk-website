@@ -24,7 +24,9 @@ const AboutLine = () => {
           <StyledImg src="images/line.jpg"></StyledImg>
         </Div>
         <Div>
-          <Paragraph text={om_meg_intro}></Paragraph>
+          <DivText>
+            <Paragraph text={om_meg_intro}></Paragraph>
+          </DivText>
         </Div>
         </StyledHorizontalContainer>
         <StyledHorizontalContainer>
@@ -49,6 +51,17 @@ const StyledImg = styled.img`
   border-radius: 50%;
   height: 250px;
   width: 250px;
+`;
+
+const DivText = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
 `;
 const Div = styled.div`
   width: 50%;

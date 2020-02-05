@@ -5,7 +5,7 @@ import Paragraph from "../../commons/Paragraph";
 import { DollarSign, XCircle, ShoppingBag } from "react-feather";
 import styled from "styled-components";
 import { dispatch } from "../../Store/State";
-import { q1 } from "../../commons/Quotes";
+import { q2 } from "../../commons/Quotes";
 
 const showModalAction = () => dispatch({
   type: "showModalAction"
@@ -13,26 +13,26 @@ const showModalAction = () => dispatch({
 
 const Practicalinfo = () => {
 
-    const timebestilling = "Send en e-post (rommetline@gmail.com) eller ta kontakt på telefon (98476555) hvis du lurer på noe eller vil bestille time. All informasjon du oppgir er taushetsbelagt og vil bli behandlet konfidensielt. Det er også mulig å forespørre en time via «bestill time»-funksjonen under.";
-    const betaling = "Vipps er å foretrekke, da kortautomat ikke er etablert. Betaling gjennomføres etter endt time. \nJeg har dessverre ingen refusjonsavtale gjennom frikortordningen.";
+    const timebestilling = "Send en e-post (rommetline@gmail.com), ta kontakt på telefon (98476555) eller benytt deg av 'bestill time' under hvis du lurer på noe eller vil bestille time. All informasjon du oppgir er taushetsbelagt og vil bli behandlet konfidensielt.";
+    const betaling = `750,- for 60 minutter samtaleterapi\n 25% studentrabatt\n Vipps er å foretrekke, da kortautomat ikke er etablert. Betaling gjennomføres etter endt time. \nJeg har dessverre ingen refusjonsavtale gjennom frikortordningen.`;
     const avbestilling = "Det er vanskelig å fylle avbestilte timer på kort varsel, derfor er det fint om flytting av time eller avbestilling skjer så fort som mulig, senest 24 timer (1 virkedag) før avtalt time. Timer avbestilt eller byttet etter dette belastes klienten i sin helhet.";
 
     return (
       <StyledOuter>
         <StyledContainer className="animated fadeIn">
-          <Header text={"Priser & info"} quote={q1}></Header>
+          <Header text={"Priser & info"} quote={q2}></Header>
 
           <StyledHorizontalContainer>
             
-            <Paragraph displayLesMer headertext={"Timebestilling"} text={timebestilling}>
-              <ShoppingBag style={{color: "palevioletred"}}></ShoppingBag>
-            </Paragraph>
-            
-            <Paragraph displayLesMer headertext={"Betaling"} text={betaling}>
+            <Paragraph headertext={"Betaling"} text={betaling}>
               <DollarSign style={{color: "palevioletred"}} />
+            </Paragraph>
+
+            <Paragraph headertext={"Timebestilling"} text={timebestilling}>
+              <ShoppingBag style={{color: "palevioletred"}}></ShoppingBag>
             </Paragraph>            
             
-            <Paragraph displayLesMer headertext={"Avbestilling"} text={avbestilling}>
+            <Paragraph headertext={"Avbestilling"} text={avbestilling}>
               <XCircle style={{color: "palevioletred"}} />
             </Paragraph>
           </StyledHorizontalContainer>
