@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import Header from "../../commons/Header";
 import styled from "styled-components";
 import { useGlobalState } from "../../Store/State";
+import { q1 } from "../../commons/Quotes";
 
 
 const Contact = () => {
@@ -19,7 +20,7 @@ const Contact = () => {
     {page === 5 ? 
     <StyledOuter>
       <StyledContainer className="animated fadeIn">
-        <Header text={"Kontakt"}></Header>
+        <Header text={"Kontakt"} quote={q1}></Header>
         <Footer instagramcolor={"palevioletred"}></Footer>
       </StyledContainer>
     </StyledOuter> 

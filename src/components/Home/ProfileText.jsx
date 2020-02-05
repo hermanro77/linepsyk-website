@@ -9,7 +9,7 @@ const ProfileText = () => {
           Line
         </div>
         <div>
-          Psykoterapaut
+          Rommetveit
         </div>
       </StyledText>
   );
