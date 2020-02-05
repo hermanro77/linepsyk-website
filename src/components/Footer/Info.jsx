@@ -54,16 +54,15 @@ export const StyledMailLink = styled.a`
 
   &:hover {
     cursor: pointer;
-    background: linear-gradient(to right, #43c6ac, #f8ffae);
-    color: rgba(20, 20, 20, 0.8);
+    background: white;
     border-radius: 4px;
     margin-right: 10px;
     
     h1{
-      color: rgba(20, 20, 20, 0.8);
+      color: palevioletred;
     }
     *{
-      color: rgb(20, 20, 20);
+      color: palevioletred;
     }
   }
 
@@ -73,17 +72,16 @@ export const StyledMailLink = styled.a`
 
   @media screen and (max-width: 768px){
     font-size: 2.5vw;
-    background: linear-gradient(to right, #43c6ac, #f8ffae);
+    background: rgba(256, 256, 256, 1);
     width: 100%;
     border-radius: 4px;
-    color: rgba(20, 20, 20, 0.7);
     margin-bottom: 5px;
     
     h1{
-      color: rgba(20, 20, 20, 0.8);
+      color: palevioletred;
     }
     *{
-      color: rgb(20, 20, 20);
+      color: palevioletred;
     }
     *:not(:last-child) {
       margin-right: 15px;

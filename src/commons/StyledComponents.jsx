@@ -45,7 +45,7 @@ export const StyledContainer = styled.div`
     overflow: auto;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     padding: 1.5rem;
     overflow: auto;
   }
@@ -76,3 +76,28 @@ export const StyledAlert = styled.div`
     text-align: center;
   }
 `;
+
+export const ContactTransition = styled.div`
+  content: "";
+  left: 0;
+  height: 100px;
+  background: palevioletred;
+  opacity: 0.85;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  margin: -2rem;
+  transform: translateY(-1.99rem);
+  margin-top: 0;
+
+  @media screen and (max-width: 768px){
+    margin: -1.5rem;
+    transform: translateY(-1.49rem);
+    clip-path: polygon(100% 80%, 0 100%, 100% 100%);
+  }
+
+  @media screen and (max-width: 450px){
+    margin: -1rem;
+    transform: translateY(-0.99rem);
+    clip-path: polygon(100% 70%, 0 100%, 100% 100%);
+  }
+`;
+

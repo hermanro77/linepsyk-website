@@ -194,9 +194,6 @@ const BestillTimeButton = styled.div`
     transform: scale(1.001);
     position: relative;
     line-height: 2rem;
-    -webkit-box-shadow: 0px 6px 25px 0px rgba(105, 39, 255, 0.5);
-    -moz-box-shadow:    0px 6px 25px 0px rgba(105, 39, 255, 0.5);
-    box-shadow:         0px 6px 25px 0px rgba(105, 39, 255, 0.5);
     background-color: #6927ff;
     color: #E5F3F3;
     font-size: 1rem
@@ -205,19 +202,13 @@ const BestillTimeButton = styled.div`
     border: none;
     font-weight: 800;
     
-    &:focus, &:hover {
-      background-color: #6927ff;
-      font-size: 1.2rem;
-      color: rgba(20, 20, 20, 0.8);
-    }
+    transform: none;
+    background: linear-gradient(to right, #43c6ac, #f8ffae);
 
-    svg {
-      height: 1.2rem;
-      width: 1.2rem;
-      opacity: 0.5;
-      position: absolute;
-      right: 10%;
-      top: 32.5%;
+    &:hover, &:active{
+      background: linear-gradient(to right, #43c6ac, #f8ffae);
+      color: rgba(20, 20, 20, 0.8);
+      font-size: 1.2rem;
     }
 
   }

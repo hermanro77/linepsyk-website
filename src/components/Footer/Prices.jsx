@@ -1,14 +1,16 @@
 import React from "react";
 import { StyledVerticalContainer } from "./Info";
 import styled from "styled-components";
+import { useGlobalState } from "../../Store/State";
 
 const Prices = () => {
+  const [page, setPage] = useGlobalState("page");
 
   return(
     <StyledVerticalContainer>
-      <StyledP><StyledH2>750kr/60 minutter</StyledH2></StyledP>
-      <StyledP><StyledH2>25% student rabatt</StyledH2></StyledP>
-      <StyledP><StyledH2>For mer info send meg gjerne en melding</StyledH2></StyledP>
+      <StyledP page={page}><StyledH2>750kr/60 minutter</StyledH2></StyledP>
+      <StyledP page={page}><StyledH2>25% student rabatt</StyledH2></StyledP>
+      <StyledP page={page}><StyledH2>For mer info send meg gjerne en melding</StyledH2></StyledP>
     </StyledVerticalContainer>
 
   );
@@ -20,7 +22,7 @@ export default Prices;
 const StyledP = styled.div`
   text-align: left;
   border-top: 2px dashed;
-  border-color: #86d9ab !important;
+  border-color: ${({page}) => page === 5 ? "palevioletred !important" : "white !important"};
   margin:0; padding: 30px;
   counter-increment: section;
   position: relative;
@@ -57,12 +59,12 @@ const StyledP = styled.div`
   }
 
   @media screen and (max-width: 768px){
-    border-color: #43c6ac !important;
+    border-color: ${({page}) => page === 5 ? "palevioletred !important" : "white !important"};
   }
 `;
 
 const StyledH2 = styled.h2`
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   @media screen and (max-width: 600px) {
     font-size: 3.5vw;

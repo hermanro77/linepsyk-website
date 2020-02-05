@@ -6,6 +6,7 @@ import { DollarSign, XCircle, ShoppingBag } from "react-feather";
 import styled from "styled-components";
 import { dispatch } from "../../Store/State";
 import { q2 } from "../../commons/Quotes";
+import Contact from "../Contact/Contact";
 
 const showModalAction = () => dispatch({
   type: "showModalAction"
@@ -37,21 +38,24 @@ const Practicalinfo = () => {
             </Paragraph>
           </StyledHorizontalContainer>
           
-          <StyledHorizontalContainer>
-          <Button onClick={() => showModalAction()} transformdown={"true"}>
-              <StyledSpan>B</StyledSpan>
-              <StyledSpan>e</StyledSpan>
-              <StyledSpan>s</StyledSpan>
-              <StyledSpan>t</StyledSpan>
-              <StyledSpan>i</StyledSpan>
-              <StyledSpan>l</StyledSpan>
-              <StyledSpan>l&nbsp;</StyledSpan>
-              <StyledSpan>t</StyledSpan>
-              <StyledSpan>i</StyledSpan>
-              <StyledSpan>m</StyledSpan>
-              <StyledSpan>e</StyledSpan> 
-            </Button>
+          <StyledHorizontalContainer >
+            <Button onClick={() => showModalAction()} style={{minHeight: "50px"}}>
+                <StyledSpan>B</StyledSpan>
+                <StyledSpan>e</StyledSpan>
+                <StyledSpan>s</StyledSpan>
+                <StyledSpan>t</StyledSpan>
+                <StyledSpan>i</StyledSpan>
+                <StyledSpan>l</StyledSpan>
+                <StyledSpan>l&nbsp;</StyledSpan>
+                <StyledSpan>t</StyledSpan>
+                <StyledSpan>i</StyledSpan>
+                <StyledSpan>m</StyledSpan>
+                <StyledSpan>e</StyledSpan> 
+              </Button>
             </StyledHorizontalContainer>
+
+            <Contact></Contact>
+            
         </StyledContainer>   
       </StyledOuter>
       
@@ -68,6 +72,7 @@ const StyledHorizontalContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  margin-bottom: 2rem;
 
   @media screen and (max-width: 768px){
     flex-direction: column;
@@ -97,7 +102,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 max-width: fit-content;
-margin-bottom: 2rem;
+
 
 &:hover {
   background: transparent;

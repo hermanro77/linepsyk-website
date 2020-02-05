@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
-const SocialFollow = () => {
+const SocialFollow = ({instagramcolor}) => {
 
     return (
       <SocialFollowContainer>
         <Styledh3>Følg og les mer om meg her!</Styledh3>
         <div>
-        <StyledIconLink instagram={true} href={"https://www.instagram.com/gestaltline"}>
+        <StyledIconLink instagramcolor={instagramcolor} href={"https://www.instagram.com/gestaltline"}>
           <FontAwesomeIcon style={{height: "50px", width: "50px"}} icon={faInstagram}></FontAwesomeIcon>
         </StyledIconLink>
 
@@ -45,7 +45,7 @@ const StyledIconLink = styled.a`
   margin: 25px 25px;
   transition: transform 250ms;
   display: inline-block;
-  color: ${props => props.instagram ? "palevioletred" : "#4968ad"};
+  color: ${({instagramcolor}) => instagramcolor ? instagramcolor : "#4968ad"};
   
   &:hover {
     cursor: pointer;

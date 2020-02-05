@@ -3,6 +3,9 @@ import { StyledOuter, StyledContainer } from "../../commons/StyledComponents";
 import Profile from "./Profile";
 import HomeButtons from "./HomeButtons";
 import styled from "styled-components";
+import AboutGestalt from "../AboutGestalt/AboutGestalt";
+import AboutLine from "../AboutLine/AboutLine";
+import Therapy from "../Therapy/Therapy";
 
 const Home = () => {
 

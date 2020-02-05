@@ -9,6 +9,7 @@ import Header from "../../commons/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { q1 } from "../../commons/Quotes";
+import Contact from "../Contact/Contact";
 
 const AboutGestalt = () => {
 
@@ -27,6 +28,11 @@ const AboutGestalt = () => {
         <Header text={"om gestalt"} quote={q1}></Header>
 
         <StyledHorizontalContainer>
+          <ResponsivePlayer url={"https://www.youtube.com/watch?v=NXBRbdQYCqA"} />
+          <ResponsivePlayer url={"https://www.youtube.com/watch?v=2ca8P2eGppg"} />
+        </StyledHorizontalContainer>
+
+        <StyledHorizontalContainer>
           <Paragraph displayLesMer headertext={"Grunnleggende ideer"} text={grunnleggende_ideer}>
           <FontAwesomeIcon style={{color: "palevioletred", height: "24px"}} icon={faLightbulb}></FontAwesomeIcon>
           </Paragraph>
@@ -39,12 +45,9 @@ const AboutGestalt = () => {
           <FontAwesomeIcon style={{color: "palevioletred", height: "24px"}} icon={faQuestion}></FontAwesomeIcon>
           </Paragraph>
         </StyledHorizontalContainer>
-
-        <StyledHorizontalContainer>
-          <ResponsivePlayer url={"https://www.youtube.com/watch?v=NXBRbdQYCqA"} />
-          <ResponsivePlayer url={"https://www.youtube.com/watch?v=2ca8P2eGppg"} />
-        </StyledHorizontalContainer>
         
+        <Contact></Contact>
+      
       </StyledContainer>   
     </StyledOuter>
   );
@@ -60,5 +63,6 @@ const StyledHorizontalContainer = styled.div`
 
   @media screen and (max-width: 768px){
     flex-direction: column;
+    align-items: center;
   }
 `;

@@ -1,11 +1,12 @@
 import React from "react";
-import { StyledOuter, StyledContainer } from "../../commons/StyledComponents";
+import { StyledOuter, StyledContainer, ContactTransition } from "../../commons/StyledComponents";
 import Header from "../../commons/Header";
 import Paragraph from "../../commons/Paragraph";
 import {q2} from "../../commons/Quotes";
 import styled from "styled-components";
 import { User, Eye, Award } from "react-feather";
 import Profile from "../Home/Profile";
+import Contact from "../Contact/Contact";
 
 const AboutLine = () => {
 
@@ -35,6 +36,7 @@ const AboutLine = () => {
           <Paragraph displayLesMer text={målet} headertext={"Hva er målet med terapi?"}><Award style={{color: "palevioletred"}}/></Paragraph>
         </StyledHorizontalContainer>
 
+        <Contact></Contact>
       </StyledContainer>
     </StyledOuter> 
   );
@@ -78,7 +80,7 @@ const StyledHorizontalContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  margin-bottom: 2rem;
+  
   @media screen and (max-width: 768px){
     flex-direction: column;
     align-items: center;

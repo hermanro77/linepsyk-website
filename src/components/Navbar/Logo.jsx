@@ -6,7 +6,7 @@ const Logo = () => {
 
     return (
         <StyledLogo to={"/hjem"}>
-          <img alt="" src="images/onlinelogomaker-012120-2235-9444.png" />
+          <img alt="" src="images/onlinelogomaker-020520-0955-2031.png" />
         </StyledLogo>
     );
 }
@@ -34,10 +34,6 @@ const StyledLogo = styled(Link)`
   img {
     width: 100%;
     height: 90%;
-
-    &:hover {
-      transform: translateY(-1px);
-    }
   }
   
 `;
