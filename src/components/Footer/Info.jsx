@@ -50,10 +50,18 @@ const StyledH2 = styled.p`
   @media screen and (max-width: 768px) {
     font-size: 3.5vw;
     font-weight: 600;
+
+    &:hover, &:active, &:focus {
+      font-size: 3.5vw;
+    }
   }
   @media screen and (max-width: 600px) {
     font-size: 4.5vw;
     font-weight: 600;
+    
+    &:hover, &:active, &:focus {
+      font-size: 4.5vw;
+    }
   }
 `;
 

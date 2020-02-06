@@ -141,8 +141,7 @@ const HomeButton = styled(Link)`
 
     &:hover, &:active{
       background: linear-gradient(to right, #43c6ac, #f8ffae);
-      color: rgba(20, 20, 20, 0.8);
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
   }
