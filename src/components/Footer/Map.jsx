@@ -8,21 +8,21 @@ const Map = () => {
   const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={13}
-    defaultCenter={{ lat: 59.2191935, lng: 10.8853165 }}
+    defaultCenter={{ lat: 59.217390, lng: 10.922040 }}
   >
     {props.isMarkerShown && 
     <Marker 
-    position={{ lat: 59.2191935, lng: 10.8853165 }} 
+    position={{ lat: 59.217390, lng: 10.922040 }} 
     onClick={() => setShowInfoWindow(!showInfoWindow)} 
     />}
     
     {showInfoWindow && 
-    (<InfoWindow 
-    position={{ lat: 59.2191935, lng: 10.8853165 }} 
+    (<InfoWindow style={{color: "#96e9b0", textAlign: "left"}}
+    position={{ lat: 59.217390, lng: 10.922040 }} 
     onCloseClick={() => setShowInfoWindow(!showInfoWindow)}>
         <div>
           <h6>Adresse:</h6>
-          Trondalsveien 22, 1621 Gressvik
+          <h6>Mosseveien 3, 1610 Fredrikstad</h6>
         </div>
     </InfoWindow>)
     } 
