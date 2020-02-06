@@ -22,7 +22,7 @@ export default Prices;
 const StyledP = styled.div`
   text-align: left;
   border-top: 2px dashed;
-  border-color: ${({page}) => page === 5 ? "palevioletred !important" : "white !important"};
+  border-color: ${({page}) => page === 5 ? "#96e9b0 !important" : "white !important"};
   margin:0; padding: 30px;
   counter-increment: section;
   position: relative;
@@ -59,14 +59,20 @@ const StyledP = styled.div`
   }
 
   @media screen and (max-width: 768px){
-    border-color: ${({page}) => page === 5 ? "palevioletred !important" : "white !important"};
+    border-color: ${({page}) => page === 5 ? "#96e9b0 !important" : "white !important"};
   }
 `;
 
-const StyledH2 = styled.h2`
-  font-size: 20px;
+const StyledH2 = styled.p`
+  font-size: 1.7vw;
   color: white;
-  @media screen and (max-width: 600px) {
+  font-weight: 600;
+  @media screen and (max-width: 768px) {
     font-size: 3.5vw;
+    font-weight: 600;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 4.5vw;
+    font-weight: 600;
   }
 `;

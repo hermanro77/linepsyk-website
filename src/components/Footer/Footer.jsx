@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Info from "./Info";
 import Prices from "./Prices";
 
-const Footer = ({instagramcolor}) => {
+const Footer = ({instagramcolor, contactpage}) => {
 
   const palevioletredtheme = {
     color: "palevioletred",
@@ -15,12 +15,12 @@ const Footer = ({instagramcolor}) => {
   return(
     <>
     <StyledDiv style={{marginBottom: "2rem"}}>
-      <Info></Info>
+      <Info contactpage={contactpage}></Info>
       <Prices></Prices>
     </StyledDiv>
     <StyledDiv>
       <Map></Map> 
-      <SocialFollow instagramcolor={instagramcolor}></SocialFollow>
+      <SocialFollow contactpage={contactpage}></SocialFollow>
     </StyledDiv>
     </>
   );
@@ -32,7 +32,6 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: row;
   height: fit-content;
-  font-family: 'Permanent Marker', cursive;
   font-weight: 500;
 
   color: palevioletred;

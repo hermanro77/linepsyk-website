@@ -10,6 +10,8 @@ export const StyledOuter = styled.main`
   background-position: center;
   min-block-size: -webkit-fill-available;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
 `;
 
 
@@ -80,9 +82,9 @@ export const StyledAlert = styled.div`
 export const ContactTransition = styled.div`
   content: "";
   left: 0;
-  height: 100px;
-  background: palevioletred;
-  opacity: 0.85;
+  height: 150px;
+  background: #96e9b0;
+  opacity: 1;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
   margin: -2rem;
   transform: translateY(-1.99rem);

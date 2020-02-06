@@ -36,41 +36,35 @@ const StyledLesMer = styled.div`
   max-width: fit-content;
   color: white;
 
-  span { 
-    background:#fff; 
-    padding:0 10px; 
-  }
-
-
-  &:hover{
+  &:hover, &:active, &:focus{
     cursor: pointer;
-    color: palevioletred;
+    color: #96e9b0;
     
     * {
-      color: palevioletred;
+      color: #96e9b0;
     }
   }
 
   @media screen and (max-width: 768px){
-    background: palevioletred;
+    background: transparent;
     color: white;
     border-radius: 6px;
-    min-width: 25%;
-    min-height: 2rem;
+    min-width: 30%;
+    min-height: 1rem;
     margin-top: 1rem;
     justify-content: center;
     
     p {
-      display: none;
+      //display: none;
     }
 
-    &:focus{
+    &:hover, &:focus, &:active{
       cursor: pointer;
-      color: palevioletred;
-      background: white;
-    }
-    &:hover{
-      *{
+      color: white;
+      p {
+        color: white;
+      }
+      * {
         color: white;
       }
     }
@@ -111,7 +105,7 @@ const noneActiveStyles2 = `
   }
 
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical; 
   }
 `;

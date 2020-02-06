@@ -26,15 +26,15 @@ const Practicalinfo = () => {
           <StyledHorizontalContainer>
             
             <Paragraph headertext={"Betaling"} text={betaling}>
-              <DollarSign style={{color: "palevioletred"}} />
+              <DollarSign style={{color: "#96e9b0"}} />
             </Paragraph>
 
             <Paragraph headertext={"Timebestilling"} text={timebestilling}>
-              <ShoppingBag style={{color: "palevioletred"}}></ShoppingBag>
+              <ShoppingBag style={{color: "#96e9b0"}}></ShoppingBag>
             </Paragraph>            
             
             <Paragraph headertext={"Avbestilling"} text={avbestilling}>
-              <XCircle style={{color: "palevioletred"}} />
+              <XCircle style={{color: "#96e9b0"}} />
             </Paragraph>
           </StyledHorizontalContainer>
           
@@ -93,21 +93,22 @@ align-items: center;
 letter-spacing: 1.25px;
 border-radius: 4px;
 transition: 0.3s ease-in-out;
-background-color: transparent;
+background-color: #96e9b0;
 color: white;
-font-family: 'Permanent Marker', cursive;
 transform: ${({transformup}) => transformup ? "translateY(-45px)" : ""};
 transform: ${({transformdown}) => transformdown ? "translateY(45px)" : ""};
 display: flex;
 align-items: center;
 justify-content: center;
 max-width: fit-content;
+max-height: 3rem;
+
 
 
 &:hover {
-  background: transparent;
-  font-size: 1.3rem;
+  //font-size: 1.2rem;
   color: white;
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px){
@@ -121,12 +122,11 @@ max-width: fit-content;
   border-radius: 4px;
   transition: 0.3s ease-in-out;
   font-family: 'Poppins', sans-serif;
-  font-family: 'Permanent Marker', cursive;
   transform: scale(1.001);
   position: relative;
   line-height: 2rem;
 
-  background-color: palevioletred;
+  background-color: #96e9b0;
   color: white;
   font-size: 1rem
   min-width:  225px;
@@ -135,9 +135,8 @@ max-width: fit-content;
   font-weight: 800;
   
   &:focus, &:hover {
-    background-color: palevioletred;
-    font-size: 1.2rem;
-    color: rgba(20, 20, 20, 0.8);
+    background-color: #96e9b0;
+    color: white;
   }
 
   svg {

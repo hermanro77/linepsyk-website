@@ -24,7 +24,8 @@ export const StyledText = styled.div`
   font-size: 2.4em;
   font-weight: 900;
   color: white;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
 
   @media screen and (max-width: 950px){
     font-size: 1.5em;

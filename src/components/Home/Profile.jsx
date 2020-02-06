@@ -6,7 +6,7 @@ import ProfileText from "./ProfileText";
 const Profile = () => {
   return(
     <StyledVContainer>
-      <StyledImg src="images/line.jpg"></StyledImg>
+      <StyledImg src="images/image.jpg"></StyledImg>
       <ProfileText />
     </StyledVContainer>
   );

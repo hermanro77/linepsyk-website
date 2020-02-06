@@ -9,13 +9,17 @@ const ParagraphHeader = ({text}) => {
 
 export default ParagraphHeader;
 
-const StyledParagraphHeader = styled.h1`
-font-family: 'Permanent Marker', cursive;
-font-size: 20px;
-text-transform: capitalize;
-color: palevioletred;
+const StyledParagraphHeader = styled.p`
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  //background: -webkit-linear-gradient(#43c6ac, #f8ffae);
+  //-webkit-background-clip: text;
+  //-webkit-text-fill-color: transparent;
+  color: white;
+  font-weight: 600;
 
-@media screen and (max-width: 768px) {
-  font-size: 15px;
-}
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
 `;

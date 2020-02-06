@@ -88,6 +88,7 @@ const HomeButtons = () => {
           <StyledSpan>m</StyledSpan>
           <StyledSpan>e</StyledSpan> 
         </BestillTimeButton>
+        <div style={width > 768 ? {display: "none"} : {display: "block", height: "20px"}}></div>
       </StyledVerticalContainer>
     </ButtonCont>
   );
@@ -99,7 +100,7 @@ const StyledSpan = styled.span`
 `;
 
 const HomeButton = styled(Link)`
-  font-size: 1rem
+  font-size: 1rem;
   min-width:  225px;
   min-height: 55px;
   border: none;
@@ -117,13 +118,12 @@ const HomeButton = styled(Link)`
   transition: 0.3s ease-in-out;
   background-color: transparent;
   color: white;
-  font-family: 'Permanent Marker', cursive;
 
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-
+  font-family: 'Poppins', sans-serif;
   transform: ${({transformup}) => transformup ? "translateY(-45px)" : ""};
   transform: ${({transformdown}) => transformdown ? "translateY(45px)" : ""};
 
@@ -136,6 +136,8 @@ const HomeButton = styled(Link)`
   @media screen and (max-width: 768px){
     transform: none;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
+    min-width:  225px;
+    min-height: 55px;
 
     &:hover, &:active{
       background: linear-gradient(to right, #43c6ac, #f8ffae);
@@ -163,8 +165,8 @@ const BestillTimeButton = styled.div`
   border-radius: 4px;
   transition: 0.3s ease-in-out;
   background-color: transparent;
+  font-family: 'Poppins', sans-serif;
   color: white;
-  font-family: 'Permanent Marker', cursive;
   transform: ${({transformup}) => transformup ? "translateY(-45px)" : ""};
   transform: ${({transformdown}) => transformdown ? "translateY(45px)" : ""};
   
@@ -180,30 +182,10 @@ const BestillTimeButton = styled.div`
   }
   
   @media screen and (max-width: 768px){
-    margin-top: 2rem;
-    padding: 0.25rem 1rem;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    text-transform: uppercase;
-    letter-spacing: 1.25px;
-    border-radius: 4px;
-    transition: 0.3s ease-in-out;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Permanent Marker', cursive;
-    transform: scale(1.001);
-    position: relative;
-    line-height: 2rem;
-    background-color: #6927ff;
-    color: #E5F3F3;
-    font-size: 1rem;
-    min-width:  225px;
-    min-height: 55px;
-    border: none;
-    font-weight: 800;
-    
     transform: none;
     background: linear-gradient(to right, #43c6ac, #f8ffae);
+    min-width:  225px;
+    min-height: 55px;    
 
     &:hover {
       background: linear-gradient(to right, #43c6ac, #f8ffae);

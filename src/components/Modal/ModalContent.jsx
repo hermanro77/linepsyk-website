@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import ModalForm from "./ModalForm";
+import useWindowDimensions from "../../commons/CustomHooks";
 
 const ModalContent = ({ closeModalAction }) => {
-
+  const {width} = useWindowDimensions();
   return (
+    <>
       <Popup className="animated fadeInDown">
         <PopupInside>
           <Backgrounds>
@@ -21,7 +23,10 @@ const ModalContent = ({ closeModalAction }) => {
           </StyledDesc>
           <ModalForm closeModalAction={closeModalAction}></ModalForm>
         </PopupInside>
+        <div style={width > 768 ? {display: "none"} : {bottom: "0", display: "block", height: "20px"}}></div>
       </Popup>
+      
+      </>
   );
 };
 
@@ -46,6 +51,7 @@ const Popup = styled.div`
   @media screen and (max-width:768px){
     flex-direction: column;
     width: 85%;
+    overscroll-behavior: contain;
   }
 `;
 

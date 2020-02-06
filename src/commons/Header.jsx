@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import React from 'react';
 
-const Header = ({text, quote}) => {
+const Header = ({text, quote, color}) => {
   return (
     <Div>
-      <StyledHeader>{text}</StyledHeader>
+      <StyledHeader color={color}>{text}</StyledHeader>
       <StyledQuote>{quote}</StyledQuote>
     </Div>
   );
@@ -16,6 +16,7 @@ const Div = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  min-width: fit-content;
 `;
 
 const StyledHeader = styled.h1`
@@ -24,7 +25,11 @@ const StyledHeader = styled.h1`
   font-weight: 600;
   font-family: 'Permanent Marker', cursive;
   text-transform: uppercase;
-  color: white;
+  color: ${({color}) => color ? color : ""};
+  background: ${({color}) => !color ? "-webkit-linear-gradient(#43c6ac, #f8ffae)" : ""};
+  -webkit-background-clip: ${({color}) => !color ? "text" : ""};
+  -webkit-text-fill-color: ${({color}) => !color ? "transparent" : ""};
+  width: -webkit-fill-available;
   
   @media screen and (max-width: 768px) {
     font-size: 2rem;
@@ -33,9 +38,9 @@ const StyledHeader = styled.h1`
 const StyledQuote = styled.div`
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
-  font-weight: 300;
-  font-family: 'Permanent Marker', cursive; 
-  color: palevioletred;
+  font-weight: 400;
+  font-style: italic;
+  color: white;
   max-width: 85%;
   min-width: 85%;
   text-align: center;

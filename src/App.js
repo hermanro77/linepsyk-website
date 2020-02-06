@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         overflow: hidden;
         margin: 0;
+        
     } 
     input::-webkit-inner-spin-button, 
     input::-webkit-outer-spin-button { 

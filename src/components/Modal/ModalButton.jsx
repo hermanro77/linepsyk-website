@@ -48,7 +48,7 @@ const ModalButton = ({ value, closeModalAction }) => {
       
       closeModalAction();
     };
-
+    
     return (
       <ButtonCont>
         <StyledButton tabIndex="0" onClick={saveBooking}>

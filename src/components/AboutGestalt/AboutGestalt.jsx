@@ -34,15 +34,15 @@ const AboutGestalt = () => {
 
         <StyledHorizontalContainer>
           <Paragraph displayLesMer headertext={"Grunnleggende ideer"} text={grunnleggende_ideer}>
-          <FontAwesomeIcon style={{color: "palevioletred", height: "24px"}} icon={faLightbulb}></FontAwesomeIcon>
+          <FontAwesomeIcon style={{color: "#96e9b0", height: "24px"}} icon={faLightbulb}></FontAwesomeIcon>
           </Paragraph>
 
           <Paragraph displayLesMer headertext={"Terapautens rolle"} text={terapautens_rolle}>
-          <User style={{color: "palevioletred"}}></User>
+          <User style={{color: "#96e9b0"}}></User>
           </Paragraph>
 
           <Paragraph displayLesMer headertext={"Hvem egner gestaltterapi seg for?"} text={egner_seg_for}>
-          <FontAwesomeIcon style={{color: "palevioletred", height: "24px"}} icon={faQuestion}></FontAwesomeIcon>
+          <FontAwesomeIcon style={{color: "#96e9b0", height: "24px"}} icon={faQuestion}></FontAwesomeIcon>
           </Paragraph>
         </StyledHorizontalContainer>
         

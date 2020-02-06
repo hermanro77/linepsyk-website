@@ -15,7 +15,7 @@ const Therapy = () => {
           <Header text={"Terapi"} quote={q1}></Header>
           <StyledHorizontalContainer>
             <Div>
-            <Paragraph displayLesMer text={samtale_terapi} headertext={"Samtaleterapi"}><Users style={{color: "palevioletred"}} /></Paragraph>
+            <Paragraph displayLesMer text={samtale_terapi} headertext={"Samtaleterapi"}><Users style={{color: "#96e9b0"}} /></Paragraph>
             </Div>
             <StyledImg src="images/therapy.jpg"></StyledImg>
           </StyledHorizontalContainer>

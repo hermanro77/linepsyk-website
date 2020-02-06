@@ -21,7 +21,7 @@ const Contact = () => {
     <StyledOuter>
       <StyledContainer className="animated fadeIn">
         <Header text={"Kontakt"} quote={q1}></Header>
-        <Footer instagramcolor={"palevioletred"}></Footer>
+        <Footer contactpage={true}></Footer>
       </StyledContainer>
     </StyledOuter> 
     : 
@@ -29,8 +29,8 @@ const Contact = () => {
     <ContactTransition></ContactTransition>
     <Div>
       <Padding>
-        <Header text={"Kontakt"}></Header>
-        <Footer instagramcolor={"white"}></Footer>
+        <Header color={"white"} text={"Kontakt"}></Header>
+        <Footer></Footer>
       </Padding>
     </Div>
     </>
@@ -42,9 +42,10 @@ const Contact = () => {
 export default Contact;
 
 const Div = styled.div`
-  background: palevioletred;
+  background: #96e9b0;
   opacity: 0.85;
   margin: -2rem;
+  opacity: 1;
 
   @media screen and (max-width: 768px){
     margin: -1.5rem;

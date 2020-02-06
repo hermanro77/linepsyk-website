@@ -6,7 +6,7 @@ const Logo = () => {
 
     return (
         <StyledLogo to={"/hjem"}>
-          <img alt="" src="images/palevioletred_logo.png" />
+          <img alt="" src="images/redlogo.png" />
         </StyledLogo>
     );
 }
