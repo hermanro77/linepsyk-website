@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { q1 } from "../../commons/Quotes";
 import Contact from "../Contact/Contact";
+import MetaTags from 'react-meta-tags';
 
 const AboutGestalt = () => {
 

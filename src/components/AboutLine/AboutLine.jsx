@@ -5,7 +5,7 @@ import Paragraph from "../../commons/Paragraph";
 import {q2} from "../../commons/Quotes";
 import styled from "styled-components";
 import { User, Eye, Award } from "react-feather";
-import Profile from "../Home/Profile";
+import MetaTags from 'react-meta-tags';
 import Contact from "../Contact/Contact";
 
 const AboutLine = () => {

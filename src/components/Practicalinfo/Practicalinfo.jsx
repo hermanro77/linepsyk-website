@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { dispatch } from "../../Store/State";
 import { q2 } from "../../commons/Quotes";
 import Contact from "../Contact/Contact";
+import MetaTags from 'react-meta-tags';
 
 const showModalAction = () => dispatch({
   type: "showModalAction"

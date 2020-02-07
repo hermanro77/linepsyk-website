@@ -5,6 +5,7 @@ import Header from "../../commons/Header";
 import styled from "styled-components";
 import { useGlobalState } from "../../Store/State";
 import { q1 } from "../../commons/Quotes";
+import MetaTags from 'react-meta-tags';
 
 
 const Contact = () => {
