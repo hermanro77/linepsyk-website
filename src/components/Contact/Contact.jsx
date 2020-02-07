@@ -19,6 +19,10 @@ const Contact = () => {
     <>
     {page === 5 ? 
     <StyledOuter>
+      <MetaTags>
+        <title>Line Psykoterapaut i Fredrikstad | Kontakt</title>
+        <meta name="description" content="Kontakt meg gjerne for å bestille time eller dersom du lurer på noe angående terapi. Finn kontaktinformasjonen min her." />
+      </MetaTags>
       <StyledContainer className="animated fadeIn">
         <Header text={"Kontakt"} quote={q1}></Header>
         <Footer contactpage={true}></Footer>
@@ -26,6 +30,10 @@ const Contact = () => {
     </StyledOuter> 
     : 
     <>
+    <MetaTags>
+        <title>Line Psykoterapaut i Fredrikstad | Kontakt</title>
+        <meta name="description" content="Kontakt meg gjerne for å bestille time eller dersom du lurer på noe angående terapi. Finn kontaktinformasjonen min her." />
+      </MetaTags>
     <ContactTransition></ContactTransition>
     <Div>
       <Padding>

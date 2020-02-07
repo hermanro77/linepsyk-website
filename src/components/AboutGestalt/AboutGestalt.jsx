@@ -23,6 +23,10 @@ const AboutGestalt = () => {
 
   return (
     <StyledOuter>
+      <MetaTags>
+        <title>Line Psykoterapaut i Fredrikstad | Om Gestaltterapi</title>
+        <meta name="description" content="Gestaltterapi egner seg både for individual-, par- og gruppeterapi, egenutvikling, i undervisning, ledelse, organisasjonsarbeide og i konsulentarbeid. Les mer om gestaltterapi her." />
+      </MetaTags>
       <StyledContainer style={{textAlign: "center"}} className="animated fadeIn">
 
         <Header text={"om gestalt"} quote={q1}></Header>

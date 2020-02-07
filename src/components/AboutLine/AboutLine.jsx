@@ -18,6 +18,10 @@ const AboutLine = () => {
   const målet = "Målet er muligheten til bedre å kunne takle kompleksiteten i livet, bidra til større trygghet og å stå fri til å gjøre egne valg. Gjennom dette kan opplevelsen av et større nærvær, mer glede og øket livskvalitet oppstå. Det finnes ingen mal for hva som er rett eller galt, bra eller dårlig. Det handler om å våge å se på egne valg og handlinger, samt relasjonene du er en del av. Som terapeut har jeg fokus på din medvirkning, og i det terapeutiske rommet har vi tid til å møte hverandre i respekt og åpenhet.";
   return (
     <StyledOuter>
+      <MetaTags>
+        <title>Line Psykoterapaut i Fredrikstad | Om Line</title>
+        <meta name="description" content="Jeg tilbyr individuell samtaleterapi for ungdommer og voksne. Les mer om meg og min bakgrunn her." />
+      </MetaTags>
       <StyledContainer className="animated fadeIn">
         <Header text={"om Line"} quote={q2}></Header>
         <StyledHorizontalContainer>

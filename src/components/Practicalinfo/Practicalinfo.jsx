@@ -20,6 +20,10 @@ const Practicalinfo = () => {
 
     return (
       <StyledOuter>
+        <MetaTags>
+          <title>Line Psykoterapaut i Fredrikstad | Praktisk info</title>
+          <meta name="description" content="Jeg tilbyr individuell samtaleterapi for ungdommer og voksne. Les mer om hvordan samtaleterapi fungerer her." />
+        </MetaTags>
         <StyledContainer className="animated fadeIn">
           <Header text={"Priser & info"} quote={q2}></Header>
 

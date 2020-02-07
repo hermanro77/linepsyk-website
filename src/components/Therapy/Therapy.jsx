@@ -11,6 +11,10 @@ const Therapy = () => {
     const samtale_terapi = "Psykiske problemer oppstår når vi mister kontakten med våre grunnleggende følelser og behov. Vi mennesker er født med evnen til å oppleve et stort spekter av følelser, som glede, tristhet, sinne, frykt, stolthet, skam og kjærlighet. Hver av disse følelsene forteller oss noe om hva som er viktig for oss og hva vi trenger. Forskning har vist at følelsesmessig kvaliteten i samspill tidlig i livet, er med på å danne våre mønstre for regulering av følelser og sosial atferd senere i livet. Denne selvreguleringen, eller kreative tilpasningen, gjør seg gjeldende gjennom livet på en mer eller mindre hensiktsmessig måte.  Noen relasjonelle mønstre er etablert før vårt sanselige- og kognitive apparat var fullt utviklet. Dette kan gjøre dem vanskelig å forholde seg til på en oppmerksom og bevisst måte. Terapien gir oss mulighet til å la våre relasjonelle mønstre bli synliggjort i en terapeutisk relasjon. Der kan de bli bekreftet, språkliggjort og forstått.";
     return (
       <StyledOuter>
+        <MetaTags>
+          <title>Line Psykoterapaut i Fredrikstad | Praktisk info</title>
+          <meta name="description" content="Jeg tilbyr individuell samtaleterapi for ungdommer og voksne. Les mer om priser og hvordan bestille time her." />
+        </MetaTags>
         <StyledContainer className="animated fadeIn">
           <Header text={"Terapi"} quote={q1}></Header>
           <StyledHorizontalContainer>
