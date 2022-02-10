@@ -9,7 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "animate.css": "^3.7.2",
     "google-map-react": "^1.1.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-alert": "^6.0.0",
     "react-alert-template-basic": "^1.0.0",
